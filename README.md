@@ -1,0 +1,58 @@
+# 🌾 AgroAsistencia - Sistema de Gestión Agrícola
+
+**AgroManager** es una aplicación completa para la gestión de usuarios, agricultores, fincas, maquinaria y trabajos agrícolas. Ofrece una interfaz intuitiva para registrar, consultar y controlar todas las operaciones del campo, incluyendo herramientas interactivas como geolocalización, chat directo con agricultores y un sistema de seguimiento meteorológico por zonas.
+
+---
+
+## 🚀 Características principales
+
+- **CRUD completo** para:
+  - Usuarios
+  - Agricultores
+  - Fincas
+  - Maquinarias
+  - Registros de trabajos
+
+- **Módulo de "Menú Agricultores"**:
+  - Listado de agricultores disponibles para colaborar.
+  - Botón directo para chatear vía WhatsApp con cada agricultor.
+
+- **Registro detallado de trabajos**:
+  - Asociación del trabajo con agricultor, maquinaria y finca.
+  - Información detallada: duración, observaciones, tareas, productos fitosanitarios aplicados.
+
+- **Sistema de geolocalización interactivo**:
+  - Mapa dinámico donde puedes hacer clic en una zona para ver el clima actual.
+  - Visualización de todas las fincas geolocalizadas.
+
+- **Control de uso de fitosanitarios**:
+  - Registro automático de los fitosanitarios usados.
+  - Estadísticas con los tres productos más utilizados.
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- **Frontend**: *(Ej: React, Vue, Bootstrap, etc.)*
+- **Backend**: *(Ej: Node.js, Express, Laravel, Django, etc.)*
+- **Base de Datos**: *(Ej: PostgreSQL, MySQL, MongoDB, etc.)*
+- **APIs externas**: 
+  - API de clima (ej. OpenWeatherMap)
+  - API de mapas (ej. Leaflet, Google Maps)
+  - WhatsApp URL API para chats directos
+
+---
+
+## 📦 Instalación
+
+```bash
+git clone https://github.com/pablillo20/TFG-AgroAsistenciar.git
+cd agromanager
+npm install # o yarn install
+````
+## 🖥️ Uso
+```bash
+npm run dev
+```
+
+
