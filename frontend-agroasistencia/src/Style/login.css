@@ -1,0 +1,234 @@
+/* Estilos Base (Mobile First - para pantallas pequeñas, ej. 320px - 600px) */
+
+.fondo-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Mantener la altura mínima para centrar verticalmente */
+  padding: 15px; /* Añadir padding para pantallas muy pequeñas */
+  box-sizing: border-box; /* Asegurar que el padding no cause desbordamiento */
+}
+
+.formulario-login {
+  background-color: white;
+  padding: 30px; /* Ajustado para móviles desde el media query existente */
+  border-radius: 8px; /* Ligeramente reducido para móviles */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra más suave para móviles */
+  width: 100%; /* Ocupar todo el ancho disponible */
+  max-width: 380px; /* Ajuste para que no sea demasiado ancho en móvil */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.formulario-login:hover {
+  transform: none; /* Desactivar hover transform en móviles para evitar toques accidentales */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Mantener la sombra base */
+}
+
+.formulario-login h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px; /* Ligeramente reducido para móviles */
+  font-weight: 600;
+  font-size: 24px; /* Ajustado para móviles desde el media query existente */
+}
+
+.formulario-login div {
+  margin-bottom: 18px; /* Ligeramente reducido para móviles */
+}
+
+.formulario-login label {
+  display: block;
+  margin-bottom: 6px; /* Ligeramente reducido para móviles */
+  color: #555;
+  font-weight: 500;
+  font-size: 13px; /* Reducido para móviles */
+}
+
+.formulario-login input {
+  width: 100%;
+  padding: 10px; /* Ajustado para móviles desde el media query existente */
+  border: 1px solid #ddd;
+  border-radius: 5px; /* Ligeramente reducido para móviles */
+  box-sizing: border-box;
+  font-size: 14px; /* Ajustado para móviles desde el media query existente */
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.formulario-login input:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 4px rgba(76, 175, 80, 0.3); /* Sombra más suave */
+}
+
+.formulario-login .error {
+  color: #FF5252;
+  font-size: 13px; /* Reducido para móviles */
+  margin-top: 4px; /* Ligeramente reducido */
+}
+
+.formulario-login button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 18px; /* Ajustado para móviles desde el media query existente */
+  border: none;
+  border-radius: 5px; /* Ligeramente reducido */
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px; /* Ajustado para móviles desde el media query existente */
+  transition: background-color 0.3s ease-in-out, transform 0.1s ease;
+  margin-top: 8px; /* Ligeramente reducido */
+}
+
+.formulario-login button:hover {
+  background-color: #45a049;
+  transform: none; /* Desactivar transform en hover para móviles */
+}
+
+.formulario-login button:active {
+  background-color: #388E3C;
+  transform: none; /* Desactivar transform en active para móviles */
+}
+
+.formulario-login .register-link {
+  text-align: center;
+  margin-top: 18px; /* Ligeramente reducido */
+  font-size: 13px; /* Reducido para móviles */
+  color: #666;
+}
+
+.formulario-login .register-link a {
+  color: #2196F3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.formulario-login .register-link a:hover {
+  text-decoration: underline;
+}
+
+
+/* ========================================================= */
+/* MEDIA QUERIES */
+/* ========================================================= */
+
+/* --- TABLETS (601px a 1024px) --- */
+@media (min-width: 601px) {
+  .formulario-login {
+      padding: 35px; /* Ajuste intermedio del padding */
+      border-radius: 10px; /* Ajuste intermedio del border-radius */
+      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1); /* Ajuste intermedio de la sombra */
+      max-width: 450px; /* Ajuste intermedio del ancho máximo */
+  }
+
+  .formulario-login:hover {
+      transform: translateY(-3px); /* Restaurar un ligero transform en hover */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Restaurar la sombra en hover */
+  }
+
+  .formulario-login h2 {
+      margin-bottom: 28px; /* Ajuste intermedio del margen */
+      font-size: 26px; /* Ajuste intermedio del tamaño de fuente */
+  }
+
+  .formulario-login div {
+      margin-bottom: 20px; /* Restaurar margen */
+  }
+
+  .formulario-login label {
+      margin-bottom: 8px; /* Restaurar margen */
+      font-size: 14px; /* Restaurar tamaño de fuente */
+  }
+
+  .formulario-login input {
+      padding: 11px; /* Ajuste intermedio del padding */
+      border-radius: 6px; /* Restaurar border-radius */
+      font-size: 15px; /* Ajuste intermedio del tamaño de fuente */
+  }
+
+  .formulario-login input:focus {
+      box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); /* Restaurar sombra */
+  }
+
+  .formulario-login .error {
+      font-size: 14px; /* Restaurar tamaño de fuente */
+      margin-top: 5px; /* Restaurar margen */
+  }
+
+  .formulario-login button {
+      padding: 11px 19px; /* Ajuste intermedio del padding */
+      border-radius: 6px; /* Restaurar border-radius */
+      font-size: 17px; /* Ajuste intermedio del tamaño de fuente */
+      margin-top: 9px; /* Ajuste intermedio del margen */
+  }
+
+  .formulario-login button:hover {
+      transform: translateY(-2px); /* Restaurar transform en hover */
+  }
+
+  .formulario-login button:active {
+      transform: translateY(0); /* Restaurar transform en active */
+  }
+
+  .formulario-login .register-link {
+      margin-top: 20px; /* Restaurar margen */
+      font-size: 14px; /* Restaurar tamaño de fuente */
+  }
+}
+
+/* --- ESCRITORIO Y PANTALLAS GRANDES (a partir de 1025px) --- */
+@media (min-width: 1025px) {
+  .formulario-login {
+      padding: 40px; /* Volver al padding original */
+      border-radius: 12px; /* Volver al border-radius original */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Volver a la sombra original */
+      width: 400px; /* Volver al ancho original */
+      max-width: 90%; /* Mantener el max-width por si acaso, aunque el width fijo lo domina */
+  }
+
+  .formulario-login:hover {
+      transform: translateY(-4px); /* Volver al transform original */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Volver a la sombra original */
+  }
+
+  .formulario-login h2 {
+      margin-bottom: 30px; /* Volver al margen original */
+      font-size: 28px; /* Volver al tamaño de fuente original */
+  }
+
+  .formulario-login div {
+      margin-bottom: 20px; /* Volver al margen original */
+  }
+
+  .formulario-login label {
+      margin-bottom: 8px; /* Volver al margen original */
+      font-size: 14px; /* Volver al tamaño de fuente original */
+  }
+
+  .formulario-login input {
+      padding: 12px; /* Volver al padding original */
+      border-radius: 6px; /* Volver al border-radius original */
+      font-size: 16px; /* Volver al tamaño de fuente original */
+  }
+
+  .formulario-login button {
+      padding: 12px 20px; /* Volver al padding original */
+      border-radius: 6px; /* Volver al border-radius original */
+      font-size: 18px; /* Volver al tamaño de fuente original */
+      margin-top: 10px; /* Volver al margen original */
+  }
+
+  .formulario-login button:hover {
+      background-color: #45a049;
+      transform: translateY(-2px); /* Volver al transform original */
+  }
+
+  .formulario-login button:active {
+      background-color: #388E3C;
+      transform: translateY(0); /* Volver al transform original */
+  }
+
+  .formulario-login .register-link {
+      margin-top: 20px; /* Volver al margen original */
+      font-size: 14px; /* Volver al tamaño de fuente original */
+  }
+}

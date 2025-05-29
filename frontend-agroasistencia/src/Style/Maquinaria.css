@@ -1,0 +1,363 @@
+/* Estilos Base (Mobile First - para pantallas pequeñas, ej. 320px - 767px) */
+
+.maquinaria-container {
+  display: flex;
+  flex-direction: column; /* Apilar en móviles */
+  gap: 20px; /* Reducir el gap */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 15px; /* Reducir padding */
+  min-height: 80vh;
+  box-sizing: border-box;
+}
+
+.maquinaria-listado {
+  flex: 1 1 100%; /* Ocupar todo el ancho en móviles */
+  background: white;
+  padding: 20px; /* Reducir padding */
+  border-radius: 8px; /* Reducir border-radius */
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1); /* Sombra más suave */
+  display: flex;
+  flex-direction: column;
+}
+
+.maquinaria-datos {
+  width: 100%; /* Ocupar todo el ancho en móviles */
+  min-width: unset; /* Eliminar min-width específico */
+  background-color: #fafafa;
+  border-left: none; /* Eliminar borde izquierdo en móviles */
+  border-top: 1px solid #ddd; /* Añadir borde superior para separación */
+  padding: 15px; /* Reducir padding */
+  border-radius: 8px; /* Reducir border-radius para ser consistente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px; /* Reducir altura mínima */
+  box-shadow: inset 0 0 8px #eee; /* Sombra más suave */
+  text-align: center;
+}
+
+.maquinaria-datos h2 {
+  margin-bottom: 15px; /* Reducir margen */
+  font-weight: 700;
+  color: #004d40;
+  font-size: 1.2rem; /* Reducir tamaño de fuente */
+}
+
+.maquinaria-datos p {
+  color: #555;
+  font-size: 0.9rem; /* Reducir tamaño de fuente */
+  margin-bottom: 10px; /* Reducir margen */
+}
+
+h2 {
+  margin-bottom: 15px; /* Reducir margen */
+  font-weight: 700;
+  color: #00796b;
+  border-bottom: 1px solid #004d40; /* Borde más fino */
+  padding-bottom: 5px; /* Reducir padding */
+  font-size: 1.5rem; /* Reducir tamaño de fuente */
+}
+
+.error-text {
+  color: #d32f2f;
+  margin-bottom: 8px; /* Reducir margen */
+  font-weight: 600;
+  font-size: 0.9rem; /* Reducir tamaño de fuente */
+}
+
+.maquinaria-form {
+  margin: 15px 0 25px 0; /* Reducir márgenes */
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Reducir gap */
+}
+
+.maquinaria-form label {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px; /* Reducir tamaño de fuente */
+  color: #004d40;
+}
+
+input[type="text"],
+input[type="file"] {
+  padding: 8px 10px; /* Reducir padding */
+  font-size: 14px; /* Reducir tamaño de fuente */
+  margin-top: 4px; /* Reducir margen */
+  border-radius: 6px; /* Reducir border-radius */
+  border: 1.5px solid #b2dfdb; /* Borde más fino */
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+  border-color: #00796b;
+  outline: none;
+}
+
+.btn {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 10px 15px; /* Reducir padding */
+  cursor: pointer;
+  font-size: 14px; /* Reducir tamaño de fuente */
+  border-radius: 6px; /* Reducir border-radius */
+  width: 100%; /* Ocupar todo el ancho en móviles */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  align-self: center; /* Centrar el botón */
+  box-shadow: 0 2px 6px rgb(0 121 107 / 0.2); /* Sombra más suave */
+}
+
+.btn:hover {
+  background-color: #004d40;
+  box-shadow: 0 4px 10px rgb(0 77 64 / 0.4); /* Sombra más suave */
+}
+
+.btn.small {
+  padding: 5px 10px; /* Reducir padding */
+  font-size: 12px; /* Reducir tamaño de fuente */
+  margin-left: 0; /* Eliminar margen izquierdo */
+  box-shadow: none;
+  width: fit-content; /* Volver a fit-content para botones pequeños */
+  align-self: flex-start; /* Alinear a la izquierda para botones pequeños */
+}
+
+.btn.danger {
+  background-color: #d32f2f;
+  box-shadow: 0 2px 6px rgb(211 47 47 / 0.2); /* Sombra más suave */
+}
+
+.btn.danger:hover {
+  background-color: #9a0007;
+  box-shadow: 0 4px 10px rgb(154 0 7 / 0.4); /* Sombra más suave */
+}
+
+.maquinaria-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px; /* Reducir margen */
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 300px; /* Reducir altura máxima para móviles */
+}
+
+.maquinaria-list li {
+  background-color: #e0f2f1;
+  padding: 10px 12px; /* Reducir padding */
+  margin-bottom: 8px; /* Reducir margen */
+  border-radius: 8px; /* Reducir border-radius */
+  display: flex;
+  flex-direction: column; /* Apilar nombre y botones en móvil */
+  justify-content: space-between;
+  align-items: flex-start; /* Alinear al inicio */
+  cursor: pointer;
+  font-weight: 600;
+  color: #004d40;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 1px 4px rgb(0 121 107 / 0.1); /* Sombra más suave */
+}
+
+.maquinaria-list li:hover {
+  background-color: #b2dfdb;
+  box-shadow: 0 2px 8px rgb(0 121 107 / 0.2); /* Sombra más suave */
+}
+
+.actions {
+  display: flex;
+  gap: 8px; /* Reducir gap */
+  margin-top: 8px; /* Añadir margen superior para separar de la acción */
+  width: 100%; /* Ocupar todo el ancho disponible */
+  justify-content: center; /* Centrar botones */
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-size: 16px; /* Reducir tamaño de fuente */
+  padding: 20px; /* Reducir padding */
+  border: 1px dashed #b2dfdb; /* Borde más fino */
+  border-radius: 8px; /* Reducir border-radius */
+  background-color: #e0f7fa;
+  height: 150px; /* Reducir altura */
+  gap: 10px; /* Reducir gap */
+  text-align: center;
+  font-weight: 600;
+}
+
+.empty-state img {
+  width: 60px; /* Reducir tamaño de imagen */
+  opacity: 0.6;
+}
+
+
+/* ========================================================= */
+/* MEDIA QUERIES */
+/* ========================================================= */
+
+/* --- TABLETS (768px a 1024px) --- */
+@media (min-width: 768px) {
+  .maquinaria-container {
+      flex-direction: row; /* Volver a horizontal */
+      flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+      gap: 25px; /* Ajuste intermedio del gap */
+      padding: 25px; /* Ajuste intermedio del padding */
+  }
+
+  .maquinaria-listado {
+      flex: 1 1 300px; /* Permitir que ocupe más espacio pero que se envuelva */
+      padding: 25px; /* Ajuste intermedio */
+      border-radius: 10px; /* Restaurar border-radius */
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1); /* Restaurar sombra */
+  }
+
+  .maquinaria-datos {
+      width: 300px; /* Ajustar width */
+      min-width: 250px; /* Ajustar min-width */
+      border-left: 1px solid #ddd; /* Restaurar borde izquierdo */
+      border-top: none; /* Eliminar borde superior */
+      padding: 20px; /* Restaurar padding */
+      border-radius: 0 10px 10px 0; /* Restaurar border-radius */
+      min-height: 300px; /* Ajustar altura mínima */
+      box-shadow: inset 0 0 10px #eee; /* Restaurar sombra */
+  }
+
+  .maquinaria-datos h2 {
+      font-size: 1.5rem; /* Ajuste intermedio */
+  }
+
+  .maquinaria-datos p {
+      font-size: 1rem; /* Restaurar */
+  }
+
+  h2 {
+      font-size: 1.8rem; /* Ajuste intermedio */
+      border-bottom: 2px solid #004d40; /* Restaurar borde */
+      padding-bottom: 8px; /* Restaurar padding */
+  }
+
+  .error-text {
+      font-size: 1rem; /* Restaurar */
+  }
+
+  .maquinaria-form {
+      margin: 20px 0 30px 0; /* Ajuste intermedio */
+      gap: 16px; /* Restaurar gap */
+  }
+
+  .maquinaria-form label {
+      font-size: 15px; /* Restaurar */
+  }
+
+  input[type="text"],
+  input[type="file"] {
+      padding: 10px 12px; /* Restaurar padding */
+      font-size: 15px; /* Restaurar */
+      margin-top: 6px; /* Restaurar margin */
+      border-radius: 8px; /* Restaurar border-radius */
+      border: 1.8px solid #b2dfdb; /* Restaurar borde */
+  }
+
+  .btn {
+      padding: 12px 20px; /* Restaurar padding */
+      font-size: 15px; /* Restaurar */
+      border-radius: 8px; /* Restaurar border-radius */
+      width: fit-content; /* Restaurar width */
+      align-self: flex-start; /* Restaurar alineación */
+      box-shadow: 0 4px 8px rgb(0 121 107 / 0.3); /* Restaurar sombra */
+  }
+
+  .btn:hover {
+      box-shadow: 0 6px 14px rgb(0 77 64 / 0.5); /* Restaurar sombra */
+  }
+
+  .btn.small {
+      padding: 6px 14px; /* Restaurar padding */
+      font-size: 13px; /* Restaurar font-size */
+      margin-left: 6px; /* Restaurar margin-left */
+  }
+
+  .btn.danger {
+      box-shadow: 0 4px 8px rgb(211 47 47 / 0.3); /* Restaurar sombra */
+  }
+
+  .btn.danger:hover {
+      box-shadow: 0 6px 14px rgb(154 0 7 / 0.5); /* Restaurar sombra */
+  }
+
+  .maquinaria-list {
+      margin-top: 20px; /* Restaurar margin */
+      max-height: 400px; /* Restaurar max-height */
+  }
+
+  .maquinaria-list li {
+      padding: 14px 18px; /* Restaurar padding */
+      margin-bottom: 10px; /* Restaurar margin */
+      border-radius: 12px; /* Restaurar border-radius */
+      flex-direction: row; /* Volver a horizontal */
+      align-items: center; /* Restaurar alineación */
+      box-shadow: 0 2px 6px rgb(0 121 107 / 0.1); /* Restaurar sombra */
+  }
+
+  .maquinaria-list li:hover {
+      box-shadow: 0 4px 12px rgb(0 121 107 / 0.3); /* Restaurar sombra */
+  }
+
+  .actions {
+      gap: 10px; /* Restaurar gap */
+      margin-top: 0; /* Eliminar margen superior */
+      width: auto; /* Restaurar ancho */
+      justify-content: flex-end; /* Alinear a la derecha */
+  }
+
+  .empty-state {
+      font-size: 18px; /* Restaurar font-size */
+      padding: 30px; /* Ajuste intermedio */
+      border: 2px dashed #b2dfdb; /* Restaurar borde */
+      border-radius: 12px; /* Restaurar border-radius */
+      height: 200px; /* Restaurar height */
+      gap: 15px; /* Restaurar gap */
+  }
+
+  .empty-state img {
+      width: 80px; /* Ajuste intermedio */
+  }
+}
+
+/* --- ESCRITORIO Y PANTALLAS GRANDES (a partir de 1025px) --- */
+@media (min-width: 1025px) {
+  .maquinaria-container {
+      gap: 30px; /* Volver al gap original */
+      padding: 30px; /* Volver al padding original */
+  }
+
+  .maquinaria-listado {
+      flex: 1; /* Volver a flex original */
+      padding: 30px; /* Volver al padding original */
+  }
+
+  .maquinaria-datos {
+      width: 350px; /* Volver al width original */
+      min-width: 300px; /* Volver al min-width original */
+      border-left: 1px solid #ddd; /* Asegurar borde izquierdo */
+      border-radius: 0 10px 10px 0; /* Asegurar border-radius */
+      min-height: 400px; /* Volver a altura original */
+  }
+
+  .maquinaria-datos h2 {
+      font-size: 1.8rem; /* Volver al tamaño original si era 1.8 */
+  }
+
+  h2 {
+      font-size: 2rem; /* Volver al tamaño original si era 2rem */
+      margin-bottom: 20px; /* Volver al margen original */
+  }
+
+  .empty-state img {
+      width: 90px; /* Volver al tamaño original */
+  }
+}

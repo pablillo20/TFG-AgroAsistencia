@@ -1,0 +1,252 @@
+/* ========================================================= */
+/* ESTILOS BASE (Mobile First) */
+/* ========================================================= */
+
+.fitos-page {
+    max-width: 95%;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fefefe;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  
+  .principal {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .principal h1 {
+    font-size: 1.4rem;
+    color: #004d40;
+    margin-bottom: 0.4rem;
+  }
+  
+  .principal p {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  /* Tarjetas resumen */
+  .summary-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .card {
+    background: #e0f2f1;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .card h3 {
+    font-size: 1rem;
+    color: #004d40;
+    margin-bottom: 0.3rem;
+  }
+  
+  .card p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #00796b;
+  }
+  
+  /* Podio */
+  .podio-wrapper {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .podio-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #004d40;
+  }
+  
+  .podio-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .podio-stand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+  }
+  
+  .medalla {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #00796b;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.4rem;
+  }
+  
+  .podio-first .medalla { background: #ffd700; color: #000; }
+  .podio-second .medalla { background: #c0c0c0; color: #000; }
+  .podio-third .medalla { background: #cd7f32; color: #000; }
+  
+  .podio-bar {
+    width: 100%;
+    background: #004d40;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding-bottom: 0.3rem;
+  }
+  
+  .podio-name {
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Gráfico de barras horizontal */
+  .bar-graph {
+    margin-top: 2rem;
+  }
+  
+  .bar-graph h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #004d40;
+  }
+  
+  .bar-row {
+    margin-bottom: 0.8rem;
+  }
+  
+  .bar-label {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    display: block;
+    color: #333;
+  }
+  
+  .bar-track {
+    background: #cfd8dc;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 24px;
+  }
+  
+  .bar-fill {
+    background: #00796b;
+    height: 100%;
+    color: white;
+    padding: 0 0.5rem;
+    line-height: 24px;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  /* Estados */
+  .loading,
+  .error,
+  .empty {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: #555;
+  }
+  
+  /* ========================================================= */
+  /* TABLET (min-width: 768px) */
+  /* ========================================================= */
+  
+  @media (min-width: 768px) {
+    .fitos-page {
+      max-width: 800px;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+  
+    .principal h1 {
+      font-size: 1.8rem;
+    }
+  
+    .summary-cards {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    .card {
+      flex: 1;
+      min-width: 150px;
+    }
+  
+    .podio-container {
+      gap: 2rem;
+    }
+  
+    .podio-stand {
+      width: 100px;
+    }
+  
+    .bar-fill {
+      font-size: 1rem;
+    }
+  
+    .bar-graph {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  /* ========================================================= */
+  /* DESKTOP (min-width: 1025px) */
+  /* ========================================================= */
+  
+  @media (min-width: 1025px) {
+    .fitos-page {
+      max-width: 1000px;
+      padding: 2rem;
+      border-radius: 12px;
+    }
+  
+    .podio-stand {
+      width: 120px;
+    }
+  
+    .medalla {
+      width: 50px;
+      height: 50px;
+      font-size: 1.3rem;
+    }
+  
+    .podio-bar {
+      font-size: 1rem;
+    }
+  
+    .podio-name {
+      font-size: 0.95rem;
+    }
+  
+    .bar-graph h3 {
+      font-size: 1.3rem;
+    }
+  }
+  

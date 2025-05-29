@@ -1,0 +1,279 @@
+/* App.css */
+
+/* ========================================================= */
+/* ESTILOS BASE (MOBILE FIRST - para pantallas pequeñas, ej. 320px - 767px) */
+/* ========================================================= */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Necesario para el posicionamiento absoluto del menú desplegable */
+}
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Estilos para el botón de hamburguesa (visible en móviles, oculto en desktop) */
+.menu-toggle {
+    display: block; /* Visible por defecto en móviles */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001; /* Asegura que esté por encima del menú desplegable */
+    padding: 0.5rem;
+    position: absolute; /* Posicionamiento absoluto para colocarlo en la esquina derecha */
+    right: 1rem; /* Alinea a la derecha con un poco de espacio */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajusta el centrado vertical */
+}
+
+/* Estilos de la lista de navegación cuando está en modo móvil (desplegable) */
+.navigation-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Apila los enlaces verticalmente */
+    position: absolute;
+    top: 100%; /* Justo debajo del header */
+    right: 0; /* <--- Alinea el menú a la derecha */
+    width: 100%; /* Ocupa todo el ancho */
+    max-width: 300px; /* Limita el ancho máximo para que no sea demasiado grande en tablets pequeñas */
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%); /* Oculto por defecto (fuera de vista hacia la derecha) */
+    opacity: 0;
+    pointer-events: none; /* No interactuable cuando está oculto */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Transición suave */
+    z-index: 1000;
+}
+
+/* Clase para mostrar el menú cuando está abierto */
+.navigation-links.open {
+    transform: translateX(0); /* Desliza hacia la izquierda para mostrarlo */
+    opacity: 1;
+    pointer-events: auto; /* Permite la interacción */
+}
+
+.navigation-links li {
+    text-align: center; /* Centra los ítems en el menú desplegable */
+    box-sizing: border-box;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 1rem 0.5rem;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador entre ítems */
+}
+
+/* Elimina el borde inferior del último elemento en el menú desplegable */
+.nav-link:last-child,
+.navigation-links li:last-child .logout-button {
+    border-bottom: none;
+}
+
+.logout-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 1rem 0.5rem;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link:hover,
+.logout-button:hover {
+    color: #ddd;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+main {
+    padding: 1rem;
+}
+
+/* Estilos para la imagen de carga */
+.loading {
+    display: block;
+    margin: 5rem auto; /* Centra la imagen y le da un margen */
+    width: 100px; /* Ajusta el tamaño de la imagen de carga */
+    height: 100px;
+}
+
+.site-footer {
+    background-color: #333;
+    color: #f0f0f0;
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.site-footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+.site-footer nav ul li {
+    margin: 0.2rem 0;
+}
+
+.site-footer nav ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.2rem 0;
+    display: block;
+}
+
+.site-footer nav ul li a:hover {
+    color: #27ae60;
+}
+
+/* ========================================================= */
+/* MEDIA QUERIES */
+/* ========================================================= */
+
+/* --- TABLETS Y ESCRITORIO (a partir de 768px) --- */
+@media (min-width: 1600px) {
+    header {
+        padding: 1rem 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: none; /* Oculta el botón de hamburguesa en pantallas grandes */
+    }
+
+    /* Resetea los estilos para la navegación de escritorio */
+    .navigation-links {
+        display: flex;
+        flex-direction: row; /* Los enlaces se colocan en fila */
+        flex-wrap: nowrap;
+        justify-content: flex-end; /* Alinea los enlaces a la derecha */
+        width: auto;
+        margin-left: auto;
+        gap: 1.5rem; /* Espacio entre los ítems */
+        position: static; /* Deshabilita el posicionamiento absoluto */
+        background-color: transparent;
+        box-shadow: none;
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+        padding-right: 0;
+    }
+
+    .navigation-links li {
+        margin: 0;
+        flex: none;
+        width: auto;
+        text-align: left;
+    }
+
+    .nav-link,
+    .logout-button {
+        padding: 0.5rem 0;
+        border-bottom: none; /* Sin bordes en desktop */
+        white-space: nowrap; /* Evita saltos de línea en los enlaces */
+    }
+
+    .nav-link:hover,
+    .logout-button:hover {
+        background-color: transparent;
+    }
+
+    main {
+        padding: 0rem;
+    }
+
+    /* Ajuste de margen para la imagen de carga en pantallas más grandes */
+    .loading {
+        margin-top: 15rem;
+        margin-bottom: 16rem;
+    }
+
+    .site-footer {
+        padding: 1rem 2rem;
+        flex-direction: row;
+        font-size: 0.9rem;
+    }
+
+    .site-footer nav ul {
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    .site-footer nav ul li {
+        margin: 0 1rem;
+    }
+}
+
+/* --- ESCRITORIO Y PANTALLAS GRANDES --- */
+@media (min-width: 1025px) {
+    .navigation-links {
+        gap: 2rem; /* Puedes aumentar el espacio entre los ítems en escritorio */
+    }
+
+    /* Ajuste de margen para la imagen de carga en pantallas aún más grandes */
+    .loading {
+        margin-top: 18rem;
+        margin-bottom: 19rem;
+    }
+}

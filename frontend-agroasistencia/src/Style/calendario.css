@@ -1,0 +1,236 @@
+/* Estilos Base (Mobile First - para pantallas pequeñas, ej. 320px - 767px) */
+
+.contenedor-calendario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px; /* Reducido para móviles */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 80vh;
+  box-sizing: border-box;
+}
+
+.calendario {
+  width: 100%;
+  max-width: 100%; /* Asegurar que no se desborde */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px; /* Reducido para móviles */
+  margin-top: 10px; /* Reducido */
+  box-sizing: border-box;
+  overflow-x: auto; /* Permite scroll horizontal si la tabla es muy ancha */
+}
+
+.calendario h2.titulo {
+  text-align: center;
+  margin-bottom: 15px; /* Ajustado */
+  color: #00796b;
+  font-weight: 700;
+  border-bottom: 1px solid #004d40; /* Borde más fino */
+  padding-bottom: 5px; /* Ajustado */
+  font-size: 1.2rem; /* Reducido para móviles */
+}
+
+.calendario h3 {
+  text-align: center;
+  margin-bottom: 15px; /* Ajustado */
+  color: #004d40;
+  font-weight: 600;
+  font-size: 1rem; /* Reducido para móviles */
+}
+
+.calendario table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Mantiene el diseño de la tabla */
+  min-width: 300px; /* Evita que la tabla se haga demasiado pequeña */
+}
+
+.calendario thead th {
+  padding: 8px; /* Ajustado para móviles */
+  text-align: center;
+  background-color: #e0f2f1;
+  color: #004d40;
+  font-weight: 600;
+  border-bottom: 1px solid #b2dfdb; /* Borde más fino */
+  font-size: 0.8em; /* Reducido para cabeceras de tabla */
+}
+
+.calendario tbody td {
+  padding: 8px; /* Ajustado para móviles */
+  text-align: center;
+  border: 1px solid #e0f2f1;
+  border-radius: 4px; /* Radio de borde más pequeño */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  vertical-align: top;
+  height: 50px; /* Altura de celda ajustada */
+  overflow: hidden;
+  position: relative;
+  font-size: 0.9em; /* Ajustado para el contenido de la celda */
+}
+
+.calendario tbody td:hover {
+  background-color: #b2dfdb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+}
+
+.calendario tbody td.hoy {
+  background-color: #b2dfdb;
+  font-weight: bold;
+  color: #004d40;
+}
+
+.calendario tbody td.con-trabajo {
+  background-color: #b2dfdb;
+  /* Otros estilos para indicar que el día tiene trabajo */
+}
+
+.calendario tbody td.vacia {
+  background-color: #f8f8f8;
+  border: none;
+  cursor: default;
+}
+
+.mensaje-error {
+  color: #d32f2f;
+  text-align: center;
+  margin-top: 15px; /* Ajustado */
+  font-weight: 600;
+  font-size: 0.9rem; /* Ajustado */
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.titulo-trabajo {
+  position: absolute;
+  bottom: 2px;
+  left: 2px; /* Ajustado */
+  right: 2px; /* Ajustado */
+  font-size: 0.7em; /* Reducido para móviles */
+  color: #004d40;
+  font-weight: normal;
+  text-align: center; /* Centrar en móviles */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Navegación del mes */
+.navegacion-mes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%; /* Asegurar que ocupe el ancho */
+  max-width: 100rem; /* Limitar el ancho como el calendario */
+}
+
+.boton-navegacion {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em; /* Reducido */
+  padding: 5px 8px; /* Ajustado */
+  color: #004d40; /* Color para los botones */
+}
+
+.boton-navegacion:hover {
+  opacity: 0.8;
+}
+
+.selector-mes,
+.selector-año {
+  margin: 0 2px; /* Reducido */
+  padding: 3px; /* Reducido */
+  font-size: 13px; /* Reducido */
+}
+
+/* ========================================================= */
+/* MEDIA QUERIES */
+/* ========================================================= */
+
+/* --- TABLETS (768px a 1024px) --- */
+@media (min-width: 768px) {
+  .contenedor-calendario {
+      padding: 20px; /* Restaurar padding original */
+  }
+
+  .calendario {
+      padding: 20px; /* Restaurar padding original */
+      margin-top: 20px; /* Restaurar margen */
+      max-width: 100rem; /* Volver al max-width original */
+  }
+
+  .calendario h2.titulo {
+      margin-bottom: 20px;
+      border-bottom: 2px solid #004d40;
+      padding-bottom: 8px;
+      font-size: 1.5rem; /* Ajustado para tablets */
+  }
+
+  .calendario h3 {
+      margin-bottom: 20px;
+      font-size: 1.2rem; /* Ajustado para tablets */
+  }
+
+  .calendario thead th {
+      padding: 10px; /* Ligeramente más grande que móvil */
+      font-size: 0.9em;
+  }
+
+  .calendario tbody td {
+      padding: 10px; /* Ligeramente más grande que móvil */
+      height: 60px; /* Restaurar altura de celda */
+      font-size: 1em; /* Restaurar tamaño de fuente */
+  }
+
+  .calendario tbody td:hover {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .titulo-trabajo {
+      bottom: 2px;
+      left: 5px;
+      right: 5px;
+      font-size: 0.8em; /* Restaurar tamaño de fuente */
+  }
+
+  .boton-navegacion {
+      font-size: 1.2em; /* Restaurar */
+      padding: 5px 10px; /* Restaurar */
+  }
+
+  .selector-mes,
+  .selector-año {
+      margin: 0 5px; /* Restaurar */
+      padding: 5px; /* Restaurar */
+      font-size: 14px; /* Restaurar */
+  }
+}
+
+/* --- ESCRITORIO Y PANTALLAS GRANDES (a partir de 1025px) --- */
+@media (min-width: 1025px) {
+  .calendario h2.titulo {
+      font-size: 2rem; /* Restaurar tamaño original */
+  }
+
+  .calendario h3 {
+      font-size: 1.5rem; /* Restaurar tamaño original */
+  }
+
+  .calendario thead th {
+      padding: 12px; /* Restaurar padding original */
+  }
+
+  .calendario tbody td {
+      padding: 12px; /* Restaurar padding original */
+      height: 60px; /* Asegurar altura */
+  }
+
+  /* Puedes añadir más ajustes aquí si el diseño requiere más espacio
+     o elementos más grandes en pantallas muy anchas. */
+}

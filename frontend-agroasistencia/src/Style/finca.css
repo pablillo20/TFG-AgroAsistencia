@@ -1,0 +1,340 @@
+/* Estilos Base (Mobile First - para pantallas pequeñas, ej. 320px - 767px) */
+
+/* Contenedor principal */
+.fincas-manager-container {
+  display: flex;
+  flex-direction: column; /* Apilar los contenedores en móviles */
+  gap: 1.5rem; /* Reducir el gap */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1rem; /* Padding ajustado */
+  color: #333;
+}
+
+/* Contenedor lista */
+.fincas-list-container {
+  flex: 1 1 100%; /* Ocupar todo el ancho disponible */
+  max-height: 400px; /* Altura máxima reducida para móviles */
+  overflow-y: auto;
+  background: white;
+  border-radius: 8px; /* Borde más suave */
+  box-shadow: 0 0 8px rgba(0,0,0,0.1); /* Sombra más suave */
+  padding: 0.8rem; /* Padding reducido */
+}
+
+/* Tabla estilizada */
+.fincas-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 5px; /* Reducir el espaciado entre filas */
+  font-size: 0.9rem; /* Reducir el tamaño de fuente */
+  color: #444;
+  display: block; /* Permite el scroll horizontal */
+  overflow-x: auto; /* Permite scroll horizontal */
+  white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+}
+
+.fincas-table thead th {
+  background-color: #444;
+  color: white;
+  padding: 8px; /* Reducir padding */
+  text-align: left;
+  border-radius: 6px 6px 0 0; /* Borde más suave */
+  user-select: none;
+  font-size: 0.85rem; /* Reducir tamaño de fuente */
+  white-space: normal; /* Permitir salto de línea en encabezados */
+}
+
+/* Para garantizar que los encabezados de la tabla y las celdas se ajusten bien */
+.fincas-table th:first-child,
+.fincas-table td:first-child {
+  min-width: 80px; /* Ancho mínimo para la primera columna (ID/Nombre) */
+}
+.fincas-table th:nth-child(2),
+.fincas-table td:nth-child(2) {
+  min-width: 120px; /* Ancho mínimo para la segunda columna (Dirección) */
+}
+/* Agrega más para otras columnas si tienen contenido ancho */
+
+
+.fincas-table tbody tr {
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05); /* Sombra más suave */
+}
+
+.fincas-table tbody tr:hover {
+  background-color: #e7f1ff;
+}
+
+.selected-row {
+  background-color: #cfe2ff !important;
+  font-weight: 600;
+}
+
+/* Contenedor formulario + mapa */
+.form-map-container {
+  flex: 1 1 100%; /* Ocupar todo el ancho disponible */
+  background: white;
+  border-radius: 8px; /* Borde más suave */
+  box-shadow: 0 0 8px rgba(0,0,0,0.1); /* Sombra más suave */
+  padding: 0.8rem 1rem 1.5rem; /* Padding reducido */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Formulario */
+.finca-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* Gap reducido */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.2rem; /* Margen reducido */
+  color: #212529;
+  font-size: 0.9rem; /* Ajustado */
+}
+
+.form-group input {
+  padding: 0.5rem 0.6rem; /* Padding ajustado */
+  border: 1.5px solid #ced4da; /* Borde más fino */
+  border-radius: 6px;
+  font-size: 0.95rem; /* Ajustado */
+  transition: border-color 0.25s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #0a880a;
+  box-shadow: 0 0 4px rgba(17, 161, 4, 0.5); /* Sombra más suave */
+  background-color: white;
+}
+
+.form-group input[readonly] {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+/* Botón guardar */
+.btn-save {
+  background-color: #3b8b06;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 0.6rem; /* Padding reducido */
+  border-radius: 6px; /* Borde más suave */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem; /* Ajustado */
+  margin-top: 0.5rem;
+}
+
+.btn-save:hover:not(:disabled) {
+  background-color: #1b8002;
+}
+
+.btn-save:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Contenedor mapa */
+.mapa-container {
+  height: 200px; /* Altura reducida para móviles */
+  width: 100%;
+  border-radius: 6px; /* Borde más suave */
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1); /* Sombra más suave */
+  margin-top: 0.8rem; /* Margen reducido */
+}
+
+/* Mensajes */
+.error-text {
+  color: #dc3545;
+  margin-top: 0.3rem; /* Margen reducido */
+  font-weight: 600;
+  font-size: 0.85rem; /* Fuente más pequeña */
+}
+
+.loading-text {
+  font-size: 1rem; /* Reducido */
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Scroll personalizado para la tabla (sin cambios significativos para móvil, se mantiene) */
+.fincas-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.fincas-list-container::-webkit-scrollbar-thumb {
+  background-color: #0d6efd;
+  border-radius: 4px;
+}
+
+.fincas-list-container::-webkit-scrollbar-track {
+  background-color: #e9ecef;
+}
+
+.btn-fullscreen-toggle {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 6px 10px; /* Padding ajustado */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem; /* Ajustado */
+  margin-top: 0.5rem; /* Ajuste para espacio */
+}
+
+.btn-fullscreen-toggle:hover {
+  background-color: #0056b3;
+}
+
+
+/* ========================================================= */
+/* MEDIA QUERIES */
+/* ========================================================= */
+
+/* --- TABLETS (768px a 1024px) --- */
+@media (min-width: 768px) {
+  .fincas-manager-container {
+      flex-direction: row; /* Volver a horizontal */
+      flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+      gap: 1.5rem; /* Restaurar gap */
+      padding: 1.5rem; /* Restaurar padding */
+  }
+
+  .fincas-list-container {
+      flex: 1 1 300px; /* Permitir que ocupe más espacio, pero que se envuelva */
+      max-height: 500px; /* Aumentar altura máxima */
+      padding: 1rem; /* Restaurar padding */
+      border-radius: 10px; /* Restaurar borde */
+  }
+
+  .fincas-table {
+      border-spacing: 0 8px; /* Restaurar espaciado entre filas */
+      font-size: 0.95rem; /* Ajustar tamaño de fuente */
+      display: table; /* Volver al display de tabla normal */
+      overflow-x: visible; /* Desactivar scroll horizontal si no es necesario */
+      white-space: normal; /* Permitir que el texto se ajuste normalmente */
+  }
+
+  .fincas-table thead th {
+      padding: 10px; /* Restaurar padding */
+      border-radius: 8px 8px 0 0; /* Restaurar borde */
+      font-size: 0.9rem; /* Ajustar tamaño de fuente */
+  }
+
+  .fincas-table tbody tr {
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* Restaurar sombra */
+  }
+
+  /* Quitar min-width de las columnas de la tabla si ya no son necesarias */
+  .fincas-table th:first-child,
+  .fincas-table td:first-child,
+  .fincas-table th:nth-child(2),
+  .fincas-table td:nth-child(2) {
+      min-width: auto;
+  }
+
+  .form-map-container {
+      flex: 1 1 350px; /* Permitir que ocupe más espacio */
+      padding: 1rem 1.5rem 2rem; /* Restaurar padding */
+      border-radius: 10px; /* Restaurar borde */
+  }
+
+  .finca-form {
+      gap: 1rem; /* Restaurar gap */
+  }
+
+  .form-group label {
+      margin-bottom: 0.3rem; /* Restaurar margen */
+      font-size: 1rem; /* Restaurar */
+  }
+
+  .form-group input {
+      padding: 0.5rem 0.7rem; /* Restaurar padding */
+      border: 1.8px solid #ced4da; /* Restaurar borde */
+      font-size: 1rem; /* Restaurar */
+  }
+
+  .form-group input:focus {
+      box-shadow: 0 0 5px rgba(17, 161, 4, 0.5); /* Restaurar sombra */
+  }
+
+  .btn-save {
+      padding: 0.7rem; /* Restaurar padding */
+      border-radius: 8px; /* Restaurar borde */
+      font-size: 1.1rem; /* Restaurar */
+  }
+
+  .mapa-container {
+      height: 250px; /* Aumentar altura */
+      border-radius: 8px; /* Restaurar borde */
+      box-shadow: 0 0 12px rgba(0,0,0,0.1); /* Restaurar sombra */
+      margin-top: 1rem; /* Restaurar margen */
+  }
+
+  .error-text {
+      margin-top: 0.5rem; /* Restaurar margen */
+      font-size: 0.9rem; /* Restaurar */
+  }
+
+  .loading-text {
+      font-size: 1.2rem; /* Restaurar */
+  }
+
+  .btn-fullscreen-toggle {
+      padding: 8px 12px; /* Restaurar padding */
+      font-size: 1rem; /* Restaurar */
+      margin-top: 1rem; /* Ajuste para espacio */
+  }
+}
+
+/* --- ESCRITORIO Y PANTALLAS GRANDES (a partir de 1025px) --- */
+@media (min-width: 1025px) {
+  .fincas-manager-container {
+      gap: 2rem; /* Volver al gap original */
+      padding: 1rem; /* Volver al padding original */
+  }
+
+  .fincas-list-container {
+      flex: 1 1 350px; /* Volver a flex-basis original */
+      max-height: 600px; /* Volver a altura original */
+      padding: 1rem; /* Volver al padding original */
+      border-radius: 10px; /* Volver al borde original */
+  }
+
+  .fincas-table {
+      font-size: 1rem; /* Volver al tamaño de fuente original */
+  }
+
+  .fincas-table thead th {
+      padding: 12px; /* Volver al padding original */
+      font-size: 1rem; /* Volver al tamaño de fuente original */
+  }
+
+  .form-map-container {
+      flex: 1 1 350px; /* Volver a flex-basis original */
+      padding: 1rem 1.5rem 2rem; /* Volver al padding original */
+      border-radius: 10px; /* Volver al borde original */
+  }
+
+  .mapa-container {
+      height: 300px; /* Volver a altura original */
+      border-radius: 8px; /* Volver al borde original */
+  }
+
+  .btn-fullscreen-toggle {
+      margin-top: 1rem; /* Ajuste para espacio */
+  }
+}

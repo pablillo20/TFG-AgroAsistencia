@@ -1,0 +1,86 @@
+/* Estilos Base (Mobile First - para pantallas pequeñas, ej. 320px - 767px) */
+.terminos-container {
+    max-width: 100%; /* Ocupar todo el ancho disponible en móviles */
+    margin: 20px auto; /* Reducir margen superior e inferior para móviles */
+    padding: 15px; /* Reducir padding para pantallas pequeñas */
+    background-color: #ffffff;
+    border-radius: 8px; /* Borde más suave, similar a los otros contenedores */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    box-sizing: border-box; /* Asegura que el padding no añada ancho extra */
+}
+
+.terminos-container h1 {
+    font-size: 1.8rem; /* Ajustar tamaño de fuente para móviles */
+    margin-bottom: 0.8rem; /* Reducir margen inferior */
+    color: #1a1a1a;
+    text-align: center; /* Centrar el título principal */
+}
+
+.terminos-container h2 {
+    font-size: 1.2rem; /* Ajustar tamaño de fuente para móviles */
+    margin-top: 1.2rem; /* Reducir margen superior */
+    margin-bottom: 0.5rem; /* Añadir un poco de margen inferior */
+    color: #0056b3;
+}
+
+.terminos-container p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem; /* Ajustar tamaño de fuente para mejor legibilidad */
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* --- TABLETS (768px a 1024px) --- */
+@media (min-width: 768px) {
+    .terminos-container {
+        max-width: 700px; /* Aumentar el ancho máximo para tablets */
+        margin: 30px auto; /* Restaurar margen para tablets */
+        padding: 25px; /* Aumentar padding para tablets */
+        border-radius: 10px; /* Restaurar borde */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Restaurar sombra */
+    }
+
+    .terminos-container h1 {
+        font-size: 2.2rem; /* Aumentar tamaño de fuente */
+        margin-bottom: 1rem; /* Restaurar margen */
+    }
+
+    .terminos-container h2 {
+        font-size: 1.6rem; /* Aumentar tamaño de fuente */
+        margin-top: 1.8rem; /* Aumentar margen */
+        margin-bottom: 0.6rem;
+    }
+
+    .terminos-container p {
+        font-size: 1rem; /* Restaurar tamaño de fuente */
+    }
+}
+
+/* --- ESCRITORIO Y PANTALLAS GRANDES (a partir de 1025px) --- */
+@media (min-width: 1025px) {
+    .terminos-container {
+        max-width: 800px; /* Restaurar el ancho máximo original */
+        margin: 40px auto; /* Restaurar margen original */
+        padding: 30px; /* Aumentar padding para pantallas grandes */
+        border-radius: 12px; /* Restaurar borde original */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Restaurar sombra original */
+    }
+
+    .terminos-container h1 {
+        font-size: 2.5rem; /* Puede ser ligeramente más grande para desktop si lo deseas */
+        margin-bottom: 1.2rem;
+    }
+
+    .terminos-container h2 {
+        font-size: 1.8rem; /* Puede ser ligeramente más grande para desktop si lo deseas */
+        margin-top: 2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .terminos-container p {
+        font-size: 1.05rem; /* Ligeramente más grande para mejor legibilidad en pantallas grandes */
+    }
+}

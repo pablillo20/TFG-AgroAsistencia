@@ -1,0 +1,492 @@
+/* Style/LandingPage.css */
+
+/* ========================================================= */
+/* ESTILOS BASE (MOBILE FIRST - para pantallas pequeñas, ej. 320px - 767px) */
+/* ========================================================= */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #a0d9d0 0%, #c8f4b5 60%, #e8f5e9 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero {
+  background-color: #e8f5e9;
+  padding: 2rem 1rem; /* Reducido para móviles */
+  display: flex;
+  flex-direction: column; /* Apilar en móviles */
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem; /* Reducido el gap */
+  text-align: center; /* Centrar texto en móviles */
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 2rem; /* Reducido para móviles */
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1rem; /* Reducido para móviles */
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-text .button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem; /* Ajustado para móviles */
+  text-decoration: none;
+  color: #fff;
+  background-color: #27ae60;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.hero-text .button:hover {
+  background-color: #219653;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+  margin-top: 2rem; /* Añadido espacio superior en móviles */
+}
+
+.hero-image img {
+  max-width: 90%; /* Ajustado para móviles */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pesticides-section {
+  background-color: #f4f1ee;
+  border-radius: 10px;
+  margin-top: 3rem; /* Reducido para móviles */
+  gap: 1rem; /* Reducido el gap */
+  max-width: 95%; /* Ajustado para móviles */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pesticides-section,
+.farmers,
+.call-to-action {
+  padding: 2rem 1rem; /* Reducido para móviles */
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 1.5rem; /* Reducido para móviles */
+}
+
+.section-title h2 {
+  font-size: 1.8rem; /* Reducido para móviles */
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.section-title p {
+  font-size: 0.9rem; /* Reducido para móviles */
+  color: #777;
+}
+
+.pesticides-info {
+  display: flex;
+  flex-direction: column; /* Apilar en móviles */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* Reducido el gap */
+  max-width: 100%; /* Ajustado para móviles */
+  margin: 0 auto;
+}
+
+.pesticides-info img {
+  max-width: 80%; /* Ajustado para móviles */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pesticides-details {
+  text-align: center; /* Centrar texto en móviles */
+  margin-top: 1.5rem; /* Añadido espacio superior */
+}
+
+.pesticides-details h3 {
+  color: #27ae60;
+  margin-bottom: 0.8rem; /* Ajustado */
+}
+
+.pesticides-details p {
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 0.9rem; /* Ajustado */
+}
+
+.detail-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.positive {
+  color: #27ae60;
+}
+
+.stock-count {
+  color: #00796b;
+}
+
+.pesticides-details .button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem; /* Ajustado para móviles */
+  text-decoration: none;
+  color: #555;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+}
+
+.pesticides-details .button:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.farmers .image-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Una columna en móviles */
+  gap: 1.5rem; /* Reducido el gap */
+  margin-top: 1.5rem; /* Reducido el margen */
+}
+
+.farmers .image-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.farmers .image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.farmers .image-card:hover img {
+  transform: scale(1.05);
+}
+
+.farmers .overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  padding: 1rem; /* Añadido padding */
+}
+
+.farmers .image-card:hover .overlay-content {
+  opacity: 1;
+}
+
+.farmers .overlay-content h4 {
+  font-size: 1.3rem; /* Ajustado */
+  margin-bottom: 0.5rem;
+}
+
+.farmers .overlay-content p {
+  font-size: 0.9rem; /* Ajustado */
+  margin-bottom: 1rem;
+  padding: 0 0.5rem; /* Ajustado */
+  text-align: center;
+}
+
+.farmers .overlay-content .learn-more-link {
+  display: inline-block;
+  padding: 0.4rem 0.8rem; /* Ajustado */
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 0.8rem; /* Ajustado */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.farmers .overlay-content .learn-more-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.farmers .map-weather-placeholder {
+  background-color: #f9f9f9;
+  padding: 1.5rem; /* Ajustado */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-top: 1.5rem; /* Ajustado */
+}
+
+.farmers .map-weather-placeholder h3 {
+  color: #555;
+  margin-bottom: 0.8rem; /* Ajustado */
+  font-size: 1.2rem; /* Ajustado */
+}
+
+.farmers .map-weather-placeholder p {
+  color: #777;
+  font-size: 0.9rem; /* Ajustado */
+}
+
+.call-to-action {
+  background-color: #dcedc8;
+}
+
+.cta-text {
+  max-width: 95%; /* Ajustado para móviles */
+  margin: 0 auto;
+}
+
+.cta-text h2 {
+  font-size: 1.8rem; /* Ajustado para móviles */
+  color: #388e3c;
+  margin-bottom: 1rem;
+}
+
+.cta-text p {
+  font-size: 1rem; /* Ajustado para móviles */
+  color: #43a047;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.cta-text .button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem; /* Ajustado para móviles */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-text .button-secondary {
+  background-color: #43a047;
+  color: #fff;
+}
+
+.cta-text .button-secondary:hover {
+  background-color: #388e3c;
+}
+
+/* ========================================================= */
+/* MEDIA QUERIES */
+/* ========================================================= */
+
+/* --- TABLETS (768px a 1024px) --- */
+@media (min-width: 768px) {
+  .hero {
+      padding: 3rem 4rem; /* Restaurado parcialmente */
+      flex-direction: row; /* Volver a horizontal */
+      text-align: left; /* Restaurar alineación de texto */
+      gap: 5rem; /* Restaurar gap */
+  }
+
+  .hero-text h1 {
+      font-size: 2.2rem; /* Ajustado para tablets */
+  }
+
+  .hero-text p {
+      font-size: 1.05rem; /* Ajustado para tablets */
+  }
+
+  .hero-text .button {
+      padding: 0.9rem 1.8rem; /* Ajustado para tablets */
+  }
+
+  .hero-image {
+      margin-top: 0; /* Eliminar margen superior */
+  }
+
+  .hero-image img {
+      max-width: 100%; /* Restaurar a 100% */
+  }
+
+  .pesticides-section {
+      margin-top: 5rem; /* Restaurado parcialmente */
+      max-width: 90%; /* Ajustado para tablets */
+  }
+
+  .pesticides-section,
+  .farmers,
+  .call-to-action {
+      padding: 3rem 2rem; /* Restaurado parcialmente */
+  }
+
+  .section-title {
+      margin-bottom: 2rem; /* Restaurado parcialmente */
+  }
+
+  .section-title h2 {
+      font-size: 1.9rem; /* Ajustado para tablets */
+  }
+
+  .section-title p {
+      font-size: 1rem; /* Restaurado */
+  }
+
+  .pesticides-info {
+      flex-direction: row; /* Volver a horizontal */
+      text-align: left; /* Restaurar alineación de texto */
+      gap: 2rem; /* Restaurar gap */
+      max-width: 900px; /* Restaurar max-width */
+  }
+
+  .pesticides-info img {
+      max-width: 40%; /* Restaurar a 40% */
+  }
+
+  .pesticides-details {
+      text-align: left; /* Restaurar alineación de texto */
+      margin-top: 0; /* Eliminar margen superior */
+  }
+
+  .pesticides-details h3 {
+      margin-bottom: 1rem; /* Restaurar */
+  }
+
+  .pesticides-details p {
+      font-size: 1rem; /* Restaurar */
+  }
+
+  .pesticides-details .button {
+      padding: 0.75rem 1.5rem; /* Restaurar */
+  }
+
+  .farmers .image-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 2 o 3 columnas */
+      gap: 2rem; /* Restaurar */
+      margin-top: 2rem; /* Restaurar */
+  }
+
+  .farmers .overlay-content h4 {
+      font-size: 1.5rem; /* Restaurar */
+  }
+
+  .farmers .overlay-content p {
+      font-size: 1rem; /* Restaurar */
+      padding: 0 1rem; /* Restaurar */
+  }
+
+  .farmers .overlay-content .learn-more-link {
+      padding: 0.5rem 1rem; /* Restaurar */
+      font-size: 0.9rem; /* Restaurar */
+  }
+
+  .farmers .map-weather-placeholder {
+      padding: 2rem; /* Restaurar */
+      margin-top: 2rem; /* Restaurar */
+  }
+
+  .farmers .map-weather-placeholder h3 {
+      font-size: 1.5rem; /* Ajustado para tablets */
+  }
+
+  .farmers .map-weather-placeholder p {
+      font-size: 1rem; /* Restaurar */
+  }
+
+  .cta-text {
+      max-width: 800px; /* Restaurar */
+  }
+
+  .cta-text h2 {
+      font-size: 2rem; /* Restaurar */
+  }
+
+  .cta-text p {
+      font-size: 1.1rem; /* Restaurar */
+  }
+
+  .cta-text .button {
+      padding: 1rem 2rem; /* Restaurar */
+  }
+}
+
+/* --- ESCRITORIO Y PANTALLAS GRANDES (a partir de 1025px) --- */
+@media (min-width: 1025px) {
+  .hero {
+      padding: 4rem 8rem; /* Volver al padding original */
+      gap: 10rem; /* Volver al gap original */
+  }
+
+  .hero-text h1 {
+      font-size: 2.5rem; /* Volver al tamaño original */
+  }
+
+  .hero-text p {
+      font-size: 1.1rem; /* Volver al tamaño original */
+  }
+
+  .pesticides-section {
+      margin-top: 7rem; /* Volver al margen original */
+      max-width: 80%; /* Volver al max-width original */
+  }
+
+  .pesticides-section,
+  .farmers,
+  .call-to-action {
+      padding: 4rem 2rem; /* Volver al padding original */
+  }
+
+  .section-title h2 {
+      font-size: 2rem; /* Volver al tamaño original */
+  }
+
+  .section-title p {
+      font-size: 1rem; /* Volver al tamaño original */
+  }
+
+  .farmers .image-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Volver al tamaño original */
+  }
+
+  .farmers .map-weather-placeholder h3 {
+      font-size: 1.5rem; /* Volver al tamaño original */
+  }
+
+  .cta-text h2 {
+      font-size: 2.2rem; /* Volver al tamaño original */
+  }
+
+  .cta-text p {
+      font-size: 1.1rem; /* Volver al tamaño original */
+  }
+}

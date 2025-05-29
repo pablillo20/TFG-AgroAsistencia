@@ -1,0 +1,537 @@
+/* Base Styles (Mobile First - for screens up to approx. 600px) */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+}
+
+.fondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 15px; /* Add padding to prevent content from touching edges */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.formulario {
+    background-color: white;
+    padding: 30px; /* From existing mobile media query */
+    border-radius: 8px; /* Slightly smaller for mobile */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Softer shadow for mobile */
+    width: 100%; /* Take full width on small screens */
+    max-width: 380px; /* Prevent it from becoming too wide on slightly larger mobiles */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.formulario:hover {
+    transform: none; /* Disable transform on hover for touch devices */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Keep base shadow */
+}
+
+.formulario h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px; /* Adjusted for mobile */
+    font-weight: 600;
+    font-size: 24px; /* From existing mobile media query */
+}
+
+.formulario div {
+    margin-bottom: 18px; /* Adjusted for mobile */
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 6px; /* Adjusted for mobile */
+    color: #555;
+    font-weight: 500;
+    font-size: 13px; /* Slightly smaller for mobile */
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px; /* From existing mobile media query */
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Slightly smaller for mobile */
+    box-sizing: border-box;
+    font-size: 14px; /* From existing mobile media query */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Corrected selector for input focus */
+.formulario input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 4px rgba(76, 175, 80, 0.3); /* Softer shadow for mobile */
+}
+
+.errors {
+    color: #FF5252;
+    font-size: 13px; /* Adjusted for mobile */
+    margin-top: 4px; /* Adjusted for mobile */
+}
+
+.exito {
+    color: #4caf50;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.8rem; /* Adjusted for mobile */
+    font-size: 0.9em; /* Adjusted for mobile */
+}
+
+
+.formulario button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 18px; /* From existing mobile media query */
+    border: none;
+    border-radius: 5px; /* Slightly smaller for mobile */
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px; /* From existing mobile media query */
+    transition: background-color 0.3s ease-in-out, transform 0.1s ease;
+    margin-top: 8px; /* Adjusted for mobile */
+}
+
+.formulario button:hover {
+    background-color: #45a049;
+    transform: none; /* Disable transform on hover for touch devices */
+}
+
+.formulario button:active {
+    background-color: #388E3C;
+    transform: none; /* Disable transform on active for touch devices */
+}
+
+
+/* Estilos para el modal de completar registro (CompletarRegistro.js) */
+.modal-registro {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px; /* Reduced for mobile */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    z-index: 1000;
+    text-align: center;
+    width: calc(100% - 30px); /* Take most of the width, leave some padding */
+    max-width: 320px; /* Max width for general info modal */
+    box-sizing: border-box;
+}
+
+.modal-registro h3 {
+    color: #333;
+    margin-bottom: 15px; /* Reduced for mobile */
+    font-size: 1.2em; /* Adjusted for mobile */
+}
+
+.modal-registro button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px; /* Reduced for mobile */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Reduced for mobile */
+    margin: 0 5px; /* Reduced margin for mobile */
+    transition: background-color 0.3s ease;
+}
+
+.modal-registro button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el formulario dentro del modal de completar registro (MODIFICADO PARA CENTRAR) */
+.formulario-completa-registro {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px; /* Reduced for mobile */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    width: calc(100% - 30px); /* Take most of the width */
+    max-width: 380px; /* Max width for the form modal */
+    z-index: 1001;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.formulario-completa-registro h2 {
+    color: #333;
+    margin-bottom: 15px; /* Reduced for mobile */
+    font-size: 1.4em; /* Adjusted for mobile */
+    text-align: center;
+}
+
+.formulario-completa-registro div {
+    margin-bottom: 12px; /* Reduced for mobile */
+    text-align: left;
+}
+
+.formulario-completa-registro label {
+    display: block;
+    margin-bottom: 4px; /* Reduced for mobile */
+    color: #555;
+    font-weight: bold;
+    font-size: 0.9em; /* Adjusted for mobile */
+}
+
+.formulario-completa-registro input[type="text"],
+.formulario-completa-registro input[type="tel"] {
+    width: calc(100% - 0px); /* Re-calculate width based on new padding */
+    padding: 8px; /* Reduced for mobile */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px; /* Reduced for mobile */
+    box-sizing: border-box; /* Crucial for width calculation */
+}
+
+.formulario-completa-registro button[type="submit"],
+.formulario-completa-registro button[type="button"] {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 15px; /* Reduced for mobile */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Reduced for mobile */
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Reduced for mobile */
+    margin-right: 8px; /* Reduced for mobile */
+}
+
+.formulario-completa-registro button[type="button"] {
+    background-color: #f0ad4e;
+}
+
+.formulario-completa-registro button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+.formulario-completa-registro button[type="button"]:hover {
+    background-color: #eea236;
+}
+
+.formulario-completa-registro .error {
+    color: #d9534f;
+    font-size: 13px; /* Reduced for mobile */
+    margin-top: 4px; /* Reduced for mobile */
+}
+
+.formulario-completa-registro .exito {
+    color: #5cb85c;
+    font-size: 14px; /* Reduced for mobile */
+    margin-bottom: 8px; /* Reduced for mobile */
+}
+
+
+.overlay-bloqueo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* General modal styling (these will override previous specific modal styles if placed later) */
+/* Better to integrate these into specific modal selectors for clarity */
+/* .modal-registro, .formulario-completa-registro {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+} */
+
+/* Refined general error/exito for clarity, ensuring they don't clash with more specific ones */
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 0.2em;
+}
+
+.exito {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+/* ========================================================= */
+/* MEDIA QUERIES */
+/* ========================================================= */
+
+/* --- TABLETS (601px to 1024px) --- */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .fondo {
+        padding: 20px;
+    }
+
+    .formulario {
+        padding: 35px; /* Intermediate padding */
+        border-radius: 10px; /* Intermediate border-radius */
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1); /* Intermediate shadow */
+        max-width: 450px; /* Wider for tablets */
+    }
+
+    .formulario:hover {
+        transform: translateY(-3px); /* Re-enable subtle transform on hover */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Intermediate hover shadow */
+    }
+
+    .formulario h2 {
+        margin-bottom: 28px; /* Intermediate margin */
+        font-size: 26px; /* Intermediate font size */
+    }
+
+    .formulario div {
+        margin-bottom: 20px; /* Intermediate margin */
+    }
+
+    .formulario label {
+        margin-bottom: 8px; /* Restore original label margin */
+        font-size: 14px; /* Restore original label font size */
+    }
+
+    .formulario input {
+        padding: 11px; /* Intermediate padding */
+        border-radius: 6px; /* Restore original border-radius */
+        font-size: 15px; /* Intermediate font size */
+    }
+
+    .formulario input:focus {
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); /* Restore original focus shadow */
+    }
+
+    .errors {
+        font-size: 14px; /* Restore original error font size */
+        margin-top: 5px; /* Restore original error margin */
+    }
+
+    .exito {
+        margin-bottom: 1rem; /* Restore original margin */
+        font-size: 1em; /* Restore original font size */
+    }
+
+    .formulario button {
+        padding: 11px 19px; /* Intermediate padding */
+        border-radius: 6px; /* Restore original border-radius */
+        font-size: 17px; /* Intermediate font size */
+        margin-top: 10px; /* Restore original margin */
+    }
+
+    .formulario button:hover {
+        transform: translateY(-2px); /* Restore transform on hover */
+    }
+
+    .formulario button:active {
+        transform: translateY(0); /* Restore transform on active */
+    }
+
+    .modal-registro {
+        padding: 25px; /* Intermediate padding */
+        max-width: 400px; /* Wider for tablets */
+    }
+
+    .modal-registro h3 {
+        margin-bottom: 20px; /* Restore original margin */
+        font-size: 1.4em; /* Intermediate font size */
+    }
+
+    .modal-registro button {
+        padding: 10px 15px; /* Restore original padding */
+        font-size: 16px; /* Restore original font size */
+        margin: 0 10px; /* Restore original margin */
+    }
+
+    .formulario-completa-registro {
+        padding: 25px; /* Intermediate padding */
+        max-width: 450px; /* Wider for tablets */
+    }
+
+    .formulario-completa-registro h2 {
+        margin-bottom: 20px; /* Restore original margin */
+        font-size: 1.6em; /* Intermediate font size */
+    }
+
+    .formulario-completa-registro div {
+        margin-bottom: 15px; /* Restore original margin */
+    }
+
+    .formulario-completa-registro label {
+        margin-bottom: 5px; /* Restore original margin */
+        font-size: 1em; /* Restore original font size */
+    }
+
+    .formulario-completa-registro input[type="text"],
+    .formulario-completa-registro input[type="tel"] {
+        padding: 10px; /* Restore original padding */
+        font-size: 16px; /* Restore original font size */
+    }
+
+    .formulario-completa-registro button[type="submit"],
+    .formulario-completa-registro button[type="button"] {
+        padding: 12px 20px; /* Restore original padding */
+        font-size: 16px; /* Restore original font size */
+        margin-top: 20px; /* Restore original margin */
+        margin-right: 10px; /* Restore original margin */
+    }
+
+    .formulario-completa-registro .error {
+        font-size: 14px; /* Restore original font size */
+        margin-top: 5px; /* Restore original margin */
+    }
+
+    .formulario-completa-registro .exito {
+        font-size: 16px; /* Restore original font size */
+        margin-bottom: 10px; /* Restore original margin */
+    }
+}
+
+
+/* --- DESKTOPS (1025px and above) --- */
+@media (min-width: 1025px) {
+    .fondo {
+        padding: 0; /* Remove padding as max-width on form handles it */
+    }
+
+    .formulario {
+        padding: 40px; /* Original padding */
+        border-radius: 12px; /* Original border-radius */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Original shadow */
+        width: 400px; /* Original fixed width */
+        max-width: 90%; /* Original max-width for slight responsiveness */
+    }
+
+    .formulario:hover {
+        transform: translateY(-4px); /* Original transform on hover */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Original hover shadow */
+    }
+
+    .formulario h2 {
+        margin-bottom: 30px; /* Original margin */
+        font-size: 28px; /* Original font size */
+    }
+
+    .formulario div {
+        margin-bottom: 20px; /* Original margin */
+    }
+
+    .formulario label {
+        margin-bottom: 8px; /* Original margin */
+        font-size: 14px; /* Original font size */
+    }
+
+    .formulario input {
+        padding: 12px; /* Original padding */
+        border-radius: 6px; /* Original border-radius */
+        font-size: 16px; /* Original font size */
+    }
+
+    .formulario input:focus {
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); /* Original focus shadow */
+    }
+
+    .errors {
+        font-size: 14px; /* Original error font size */
+        margin-top: 5px; /* Original error margin */
+    }
+
+    .exito {
+        margin-bottom: 1rem; /* Original margin */
+        font-size: 1em; /* Original font size */
+    }
+
+    .formulario button {
+        padding: 12px 20px; /* Original padding */
+        border-radius: 6px; /* Original border-radius */
+        font-size: 18px; /* Original font size */
+        margin-top: 10px; /* Original margin */
+    }
+
+    .formulario button:hover {
+        background-color: #45a049;
+        transform: translateY(-2px); /* Original transform on hover */
+    }
+
+    .formulario button:active {
+        background-color: #388E3C;
+        transform: translateY(0); /* Original transform on active */
+    }
+
+    /* Modals for Desktop */
+    .modal-registro {
+        padding: 30px; /* Original padding */
+        max-width: 500px; /* Original max-width */
+    }
+
+    .modal-registro h3 {
+        margin-bottom: 20px; /* Original margin */
+        font-size: 1.5em; /* Original font size (assuming 1.5em as a good default) */
+    }
+
+    .modal-registro button {
+        padding: 10px 15px; /* Original padding */
+        font-size: 16px; /* Original font size */
+        margin: 0 10px; /* Original margin */
+    }
+
+    .formulario-completa-registro {
+        padding: 30px; /* Original padding */
+        max-width: 400px; /* Original max-width */
+    }
+
+    .formulario-completa-registro h2 {
+        margin-bottom: 20px; /* Original margin */
+        font-size: 1.8em; /* Original font size (assuming 1.8em as a good default) */
+    }
+
+    .formulario-completa-registro div {
+        margin-bottom: 15px; /* Original margin */
+    }
+
+    .formulario-completa-registro label {
+        margin-bottom: 5px; /* Original margin */
+        font-size: 1em; /* Original font size */
+    }
+
+    .formulario-completa-registro input[type="text"],
+    .formulario-completa-registro input[type="tel"] {
+        width: calc(100% - 0px); /* Adjust if needed */
+        padding: 10px; /* Original padding */
+        font-size: 16px; /* Original font size */
+    }
+
+    .formulario-completa-registro button[type="submit"],
+    .formulario-completa-registro button[type="button"] {
+        padding: 12px 20px; /* Original padding */
+        font-size: 16px; /* Original font size */
+        margin-top: 20px; /* Original margin */
+        margin-right: 10px; /* Original margin */
+    }
+
+    .formulario-completa-registro .error {
+        font-size: 14px; /* Original font size */
+        margin-top: 5px; /* Original margin */
+    }
+
+    .formulario-completa-registro .exito {
+        font-size: 16px; /* Original font size */
+        margin-bottom: 10px; /* Original margin */
+    }
+}

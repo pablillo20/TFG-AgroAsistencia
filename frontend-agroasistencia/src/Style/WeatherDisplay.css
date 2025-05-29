@@ -1,0 +1,61 @@
+.weather-display {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #77c1f3; /* Un azul más sólido */
+    color: #fff; /* Texto blanco */
+    padding: 5px 20px; /* Un poco menos de padding vertical */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 0.95em; /* Ligeramente más pequeño */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 900;
+    width: auto;
+    min-width: 180px;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex; /* Para alinear el icono y el título */
+    flex-direction: column; /* Título encima de la información */
+    align-items: center; /* Centrar el título y el icono */
+    
+}
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    margin-top: 20rem;
+}
+.weather-display__title-container {
+    display: flex; /* Para alinear icono y texto del título */
+    align-items: center; /* Alinear verticalmente */
+    margin-bottom: 8px; /* Espacio debajo del título */
+}
+
+.weather-display__title-container .sun-icon {
+    font-size: 1.4em; /* Tamaño del icono */
+    margin-right: 8px; /* Espacio a la derecha del icono */
+    color: #f39c12; /* Color amarillo/naranja para el sol */
+}
+
+.weather-display h2 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0; /* Eliminar márgenes predeterminados */
+}
+
+.weather-display p {
+    margin-bottom: 6px;
+    line-height: 1.4;
+    text-align: center; /* Centrar la información del clima */
+}
+
+.weather-display p:last-child {
+    margin-bottom: 0;
+}
+
+.weather-display strong {
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.weather-display.error {
+    background-color: #e74c3c;
+    color: #fff;
+}

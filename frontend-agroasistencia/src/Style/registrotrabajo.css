@@ -1,0 +1,279 @@
+/* Estilos Base (Mobile First - para pantallas pequeñas, ej. 320px - 767px) */
+
+/* Estilos para el formulario de registro de trabajo */
+.form-container {
+  background-color: #f9fafb; /* Fondo gris claro */
+  padding: 15px; /* Reducido para móviles */
+  border-radius: 8px; /* Reducido para móviles */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  margin-top: 15px; /* Reducido para móviles */
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  max-width: 100%; /* Ocupar todo el ancho disponible en móviles */
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box; /* Asegurar que el padding se incluye en el width */
+}
+
+.form-title {
+  color: #2c3e50; /* Azul oscuro para el título */
+  text-align: center;
+  margin-bottom: 20px; /* Reducido para móviles */
+  font-size: 1.6em; /* Reducido para móviles */
+  border-bottom: 1px solid #e0e0e0; /* Borde más fino */
+  padding-bottom: 10px; /* Reducido para móviles */
+}
+
+.form {
+  margin-top: 15px; /* Reducido para móviles */
+}
+
+.form-group {
+  margin-bottom: 18px; /* Reducido para móviles */
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px; /* Reducido para móviles */
+  color: #444; /* Gris más oscuro para las etiquetas */
+  font-weight: bold;
+  font-size: 1em; /* Ajustado para móviles */
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  box-sizing: border-box;
+  padding: 10px; /* Reducido para móviles */
+  border: 1px solid #cfd8dc; /* Bordes grises más suaves */
+  border-radius: 4px; /* Reducido para móviles */
+  width: 100%;
+  transition: border-color 0.3s ease;
+  font-size: 0.95em; /* Ajustado para móviles */
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #42a5f5; /* Azul más claro al enfocar */
+  box-shadow: 0 0 3px rgba(66, 153, 225, 0.3); /* Sombra más suave */
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23777' d='M2 0L0 2h4z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center; /* Ajustado para móviles */
+  background-size: 7px; /* Ajustado para móviles */
+}
+
+.form-select:focus {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%2342a5f5' d='M2 0L0 2h4z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.form-textarea {
+  resize: vertical;
+  height: 80px; /* Reducido para móviles */
+  font-family: 'Arial', sans-serif;
+  font-size: 0.95em; /* Ajustado para móviles */
+}
+
+.form-button {
+  background-color: #42a5f5; /* Azul más claro para el botón */
+  color: white;
+  padding: 10px 15px; /* Reducido para móviles */
+  border: none;
+  border-radius: 4px; /* Reducido para móviles */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1em; /* Ajustado para móviles */
+  font-weight: bold;
+  margin-top: 8px; /* Reducido para móviles */
+  width: 100%;
+}
+
+.form-button:hover {
+  background-color: #308ec0;
+  transform: none; /* Desactivar transform en hover para móviles si es demasiado intrusivo */
+}
+
+.form-button:disabled {
+  background-color: #b0bec5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.success-message,
+.error-message {
+  padding: 12px; /* Reducido para móviles */
+  border-radius: 4px; /* Reducido para móviles */
+  margin-bottom: 15px; /* Reducido para móviles */
+  font-size: 0.95em; /* Ajustado para móviles */
+  text-align: center;
+}
+
+.success-message {
+  color: #2e7d32;
+  background-color: #e6f4ea;
+  border: 1px solid #c8e6c9;
+}
+
+.error-message {
+  color: #c62828;
+  background-color: #ffebee;
+  border: 1px solid #ef9a9a;
+}
+
+.loading-message {
+  text-align: center;
+  margin-top: 15px; /* Reducido para móviles */
+  font-size: 1em; /* Ajustado para móviles */
+  color: #555;
+}
+
+/* ========================================================= */
+/* MEDIA QUERIES */
+/* ========================================================= */
+
+/* --- TABLETS (768px a 1024px) --- */
+@media (min-width: 768px) {
+  .form-container {
+      padding: 25px; /* Restaurar a un valor intermedio */
+      border-radius: 10px; /* Restaurar a un valor intermedio */
+      margin-top: 20px; /* Restaurar margen */
+      max-width: 500px; /* Ajuste intermedio del ancho máximo */
+  }
+
+  .form-title {
+      margin-bottom: 25px; /* Restaurar a un valor intermedio */
+      font-size: 1.8em; /* Restaurar a un valor intermedio */
+      border-bottom: 2px solid #e0e0e0; /* Restaurar borde */
+      padding-bottom: 12px; /* Restaurar a un valor intermedio */
+  }
+
+  .form-group {
+      margin-bottom: 20px; /* Restaurar a un valor intermedio */
+  }
+
+  .form-label {
+      margin-bottom: 10px; /* Restaurar margen */
+      font-size: 1.05em; /* Restaurar a un valor intermedio */
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+      padding: 11px; /* Restaurar a un valor intermedio */
+      border-radius: 5px; /* Restaurar a un valor intermedio */
+      font-size: 1em; /* Restaurar */
+  }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+      box-shadow: 0 0 4px rgba(66, 153, 225, 0.3); /* Restaurar sombra */
+  }
+
+  .form-select {
+      background-position: right 10px center; /* Restaurar posición */
+      background-size: 8px; /* Restaurar tamaño */
+  }
+
+  .form-textarea {
+      height: 90px; /* Restaurar a un valor intermedio */
+      font-size: 1em; /* Restaurar */
+  }
+
+  .form-button {
+      padding: 12px 20px; /* Restaurar padding */
+      border-radius: 6px; /* Restaurar border-radius */
+      font-size: 1.05em; /* Restaurar a un valor intermedio */
+      margin-top: 10px; /* Restaurar margin */
+      transform: none; /* Asegurar que no haya transform */
+  }
+
+  .form-button:hover {
+      transform: translateY(-2px); /* Restaurar transform en hover */
+  }
+
+  .success-message,
+  .error-message {
+      padding: 15px; /* Restaurar padding */
+      border-radius: 6px; /* Restaurar border-radius */
+      margin-bottom: 20px; /* Restaurar margin */
+      font-size: 1.05em; /* Restaurar a un valor intermedio */
+  }
+
+  .loading-message {
+      margin-top: 20px; /* Restaurar margin */
+      font-size: 1.1em; /* Restaurar a un valor intermedio */
+  }
+}
+
+/* --- ESCRITORIO Y PANTALLAS GRANDES (a partir de 1025px) --- */
+@media (min-width: 1025px) {
+  .form-container {
+      padding: 30px; /* Volver al padding original */
+      border-radius: 12px; /* Volver al border-radius original */
+      max-width: 600px; /* Volver al ancho máximo original */
+  }
+
+  .form-title {
+      margin-bottom: 30px; /* Volver al margen original */
+      font-size: 2em; /* Volver al tamaño de fuente original */
+      padding-bottom: 15px; /* Volver al padding original */
+  }
+
+  .form-group {
+      margin-bottom: 25px; /* Volver al margen original */
+  }
+
+  .form-label {
+      font-size: 1.1em; /* Volver al tamaño de fuente original */
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+      padding: 12px; /* Volver al padding original */
+      border-radius: 6px; /* Volver al border-radius original */
+      font-size: 1em; /* Volver al tamaño de fuente original */
+  }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+      box-shadow: 0 0 5px rgba(66, 153, 225, 0.3); /* Volver a la sombra original */
+  }
+
+  .form-select {
+      background-position: right 10px center; /* Volver a la posición original */
+      background-size: 8px; /* Volver al tamaño original */
+  }
+
+  .form-textarea {
+      height: 100px; /* Volver a la altura original */
+      font-size: 1em; /* Volver al tamaño de fuente original */
+  }
+
+  .form-button {
+      padding: 12px 20px; /* Volver al padding original */
+      border-radius: 6px; /* Volver al border-radius original */
+      font-size: 1.1em; /* Volver al tamaño de fuente original */
+      margin-top: 10px; /* Volver al margen original */
+  }
+
+  .success-message,
+  .error-message {
+      padding: 15px; /* Volver al padding original */
+      border-radius: 6px; /* Volver al border-radius original */
+      margin-bottom: 20px; /* Volver al margen original */
+      font-size: 1.1em; /* Volver al tamaño de fuente original */
+  }
+
+  .loading-message {
+      margin-top: 20px; /* Volver al margen original */
+      font-size: 1.2em; /* Volver al tamaño de fuente original */
+  }
+}

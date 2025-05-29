@@ -1,0 +1,313 @@
+/* Estilos Base (Mobile First - para pantallas pequeñas, ej. 320px - 767px) */
+
+/* Estilos para el contenedor principal */
+.fitosanitarios-manager-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px; /* Reducido para móviles */
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Estilos para la lista de fitosanitarios */
+.fitosanitarios-list-container {
+  background-color: #fff;
+  border-radius: 8px; /* Borde más suave */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Espacio reducido */
+  padding: 15px; /* Padding reducido */
+}
+
+.fitosanitarios-list-container h2 {
+  color: #00796b;
+  margin-top: 0;
+  margin-bottom: 10px; /* Reducido */
+  text-align: center;
+  font-size: 1.4rem; /* Reducido para móviles */
+}
+
+.fitosanitarios-table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block; /* Permite el scroll horizontal */
+  overflow-x: auto; /* Habilita el scroll horizontal */
+  white-space: nowrap; /* Evita que el texto de las celdas se rompa por defecto */
+}
+
+.fitosanitarios-table th,
+.fitosanitarios-table td {
+  padding: 8px; /* Reducido para móviles */
+  border-bottom: 1px solid #dee2e6;
+  text-align: left;
+  font-size: 0.85rem; /* Reducido para móviles */
+  white-space: normal; /* Permite que el texto se ajuste dentro de la celda */
+}
+
+.fitosanitarios-table th {
+  background-color: #00796b;
+  color: white;
+  font-weight: bold;
+}
+
+.fitosanitarios-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.no-data-message {
+  color: #6c757d;
+  font-style: italic;
+  text-align: center;
+  padding: 10px; /* Reducido */
+  font-size: 0.9rem; /* Reducido */
+}
+
+/* Estilos para el contenedor del formulario de sugerencia */
+.sugerencia-form-container {
+  margin-top: 2rem; /* Margen reducido */
+  background-color: #e9ecef;
+  border-radius: 8px;
+  padding: 15px; /* Padding reducido */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Sombra más suave */
+  text-align: center;
+}
+
+.sugerencia-form-container h2 {
+  color: #00796b;
+  margin-top: 0;
+  margin-bottom: 8px; /* Reducido */
+  font-size: 1.3rem; /* Reducido */
+}
+
+.sugerencia-form-container p.sugerencia-info {
+  color: #495057;
+  margin-bottom: 15px; /* Reducido */
+  font-size: 0.9rem; /* Reducido */
+}
+
+/* Estilos para el formulario de sugerencia */
+.sugerencia-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Reducido */
+  max-width: 100%; /* Ocupar todo el ancho disponible */
+  margin: 0 auto;
+}
+
+.sugerencia-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.sugerencia-form label {
+  font-weight: bold;
+  margin-bottom: 3px; /* Reducido */
+  color: #00796b;
+  text-align: left;
+  font-size: 0.9rem; /* Reducido */
+}
+
+.sugerencia-form textarea {
+  padding: 8px; /* Reducido */
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.95rem; /* Ajustado */
+  resize: vertical;
+}
+
+.sugerencia-form .btn-sugerencia {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 10px 15px; /* Reducido */
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem; /* Ajustado */
+  transition: background-color 0.3s ease;
+}
+
+.sugerencia-form .btn-sugerencia:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.sugerencia-form .btn-sugerencia:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.sugerencia-form .error-text,
+.sugerencia-form .success-text {
+  margin-top: 8px; /* Reducido */
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.85rem; /* Reducido */
+}
+
+/* Estilos para la búsqueda */
+.search-input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px; /* Reducido */
+  width: 100%;
+  max-width: 300px; /* Ancho máximo más pequeño para móviles */
+  box-sizing: border-box;
+  margin-left: auto; /* Centrar el contenedor de búsqueda */
+  margin-right: auto;
+}
+
+.search-input-container input[type="text"] {
+  padding: 8px; /* Reducido */
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  margin-right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.9rem; /* Reducido */
+}
+
+.search-input-container button {
+  padding: 8px; /* Reducido */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0;
+  font-size: 0.9rem; /* Ajustado */
+}
+
+.search-input-container button:hover {
+  background-color: #45a049;
+}
+
+.search-input-container button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+
+/* ========================================================= */
+/* MEDIA QUERIES */
+/* ========================================================= */
+
+/* --- TABLETS (768px a 1024px) --- */
+@media (min-width: 768px) {
+  .fitosanitarios-manager-container {
+      padding: 20px; /* Restaurar padding original */
+  }
+
+  .fitosanitarios-list-container {
+      margin-bottom: 25px; /* Ajuste intermedio */
+      padding: 20px; /* Restaurar padding original */
+  }
+
+  .fitosanitarios-list-container h2 {
+      margin-bottom: 15px; /* Restaurar margen */
+      font-size: 1.8rem; /* Ajuste intermedio */
+  }
+
+  .fitosanitarios-table {
+      display: table; /* Volver a display de tabla normal */
+      overflow-x: visible; /* Desactivar scroll horizontal si no es necesario */
+      white-space: normal; /* Permitir que el texto se ajuste normalmente */
+  }
+
+  .fitosanitarios-table th,
+  .fitosanitarios-table td {
+      padding: 10px; /* Restaurar padding original */
+      font-size: 0.95rem; /* Ajuste intermedio */
+  }
+
+  .no-data-message {
+      padding: 15px; /* Restaurar padding original */
+      font-size: 1rem; /* Restaurar */
+  }
+
+  .sugerencia-form-container {
+      margin-top: 4rem; /* Ajuste intermedio */
+      padding: 20px; /* Ajuste intermedio */
+  }
+
+  .sugerencia-form-container h2 {
+      margin-bottom: 10px;
+      font-size: 1.8rem; /* Ajuste intermedio */
+  }
+
+  .sugerencia-form-container p.sugerencia-info {
+      margin-bottom: 20px; /* Restaurar margen */
+      font-size: 1rem; /* Restaurar */
+  }
+
+  .sugerencia-form {
+      gap: 15px; /* Restaurar gap */
+      max-width: 500px; /* Restaurar max-width */
+  }
+
+  .sugerencia-form label {
+      margin-bottom: 5px; /* Restaurar margen */
+      font-size: 1rem; /* Restaurar */
+  }
+
+  .sugerencia-form textarea {
+      padding: 10px; /* Restaurar padding */
+      font-size: 1rem; /* Restaurar */
+  }
+
+  .sugerencia-form .btn-sugerencia {
+      padding: 12px 20px; /* Restaurar padding */
+      font-size: 1.1rem; /* Restaurar */
+  }
+
+  .sugerencia-form .error-text,
+  .sugerencia-form .success-text {
+      margin-top: 10px; /* Restaurar margen */
+      font-size: 0.9rem; /* Restaurar */
+  }
+
+  .search-input-container {
+      margin-bottom: 20px; /* Restaurar margen */
+      max-width: 400px; /* Restaurar max-width */
+  }
+
+  .search-input-container input[type="text"] {
+      padding: 10px; /* Restaurar padding */
+      font-size: 1rem; /* Restaurar */
+  }
+
+  .search-input-container button {
+      padding: 10px; /* Restaurar padding */
+      font-size: 1rem; /* Restaurar */
+  }
+}
+
+/* --- ESCRITORIO Y PANTALLAS GRANDES (a partir de 1025px) --- */
+@media (min-width: 1025px) {
+  .fitosanitarios-list-container {
+      margin-bottom: 30px; /* Volver al margen original */
+  }
+
+  .fitosanitarios-list-container h2 {
+      font-size: 2rem; /* Volver al tamaño original */
+  }
+
+  .fitosanitarios-table th,
+  .fitosanitarios-table td {
+      padding: 10px; /* Volver al padding original */
+      font-size: 1rem; /* Volver al tamaño original */
+  }
+
+  .sugerencia-form-container {
+      margin-top: 7rem; /* Volver al margen original */
+      padding: 25px; /* Volver al padding original */
+  }
+
+  .sugerencia-form-container h2 {
+      font-size: 2rem; /* Volver al tamaño original */
+  }
+
+  /* Puedes añadir más ajustes aquí si el diseño requiere más espacio
+     o elementos más grandes en pantallas muy anchas. */
+}

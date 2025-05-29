@@ -1,0 +1,144 @@
+/* Estilos Base (Mobile First - para pantallas pequeñas, ej. 320px - 767px) */
+
+.registro-container {
+  padding: 1rem; /* Reducir padding */
+  max-width: 100%; /* Ocupar todo el ancho disponible */
+  margin: 0 auto;
+  box-sizing: border-box; /* Asegurar que el padding se incluye en el width */
+}
+
+h2 {
+  font-size: 1.8rem; /* Reducir tamaño de fuente */
+  margin-bottom: 1.5rem; /* Reducir margen inferior */
+  text-align: center;
+  color: #2c3e50;
+}
+
+.registro-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem; /* Reducir tamaño de fuente */
+  display: block; /* Permite el scroll horizontal */
+  overflow-x: auto; /* Habilita el scroll horizontal */
+  white-space: nowrap; /* Evita que el texto de las celdas se rompa por defecto */
+}
+
+.registro-tabla thead {
+  background-color: #10a88f;
+  color: white;
+}
+
+.registro-tabla th,
+.registro-tabla td {
+  padding: 10px 12px; /* Reducir padding */
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: normal; /* Permite que el texto se ajuste dentro de la celda */
+}
+
+/* Opcional: Establecer un ancho mínimo para columnas importantes si no se ajustan bien */
+.registro-tabla th:first-child,
+.registro-tabla td:first-child {
+  min-width: 80px;
+}
+.registro-tabla th:nth-child(2),
+.registro-tabla td:nth-child(2) {
+  min-width: 120px;
+}
+/* Añade más reglas min-width si tienes muchas columnas o contenido largo */
+
+
+.registro-tabla tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.loading,
+.error,
+.no-registros {
+  text-align: center;
+  font-size: 1rem; /* Reducir tamaño de fuente */
+  margin-top: 1.5rem; /* Reducir margen superior */
+  color: #555;
+  padding: 1rem; /* Añadir padding para mejorar la visibilidad */
+}
+
+.error {
+  color: red;
+}
+
+
+/* ========================================================= */
+/* MEDIA QUERIES */
+/* ========================================================= */
+
+/* --- TABLETS (768px a 1024px) --- */
+@media (min-width: 768px) {
+  .registro-container {
+      padding: 2rem; /* Ajuste intermedio del padding */
+      max-width: 1000px; /* Ajuste intermedio del ancho máximo */
+  }
+
+  h2 {
+      font-size: 2.2rem; /* Ajuste intermedio del tamaño de fuente */
+      margin-bottom: 1.8rem; /* Ajuste intermedio del margen */
+  }
+
+  .registro-tabla {
+      font-size: 1.1rem; /* Ajuste intermedio del tamaño de fuente */
+      display: table; /* Volver a display de tabla normal */
+      overflow-x: visible; /* Desactivar scroll horizontal si no es necesario */
+      white-space: normal; /* Permitir que el texto se ajuste normalmente */
+  }
+
+  .registro-tabla th,
+  .registro-tabla td {
+      padding: 15px 20px; /* Ajuste intermedio del padding */
+  }
+
+  /* Eliminar min-width de las columnas de la tabla si ya no son necesarias */
+  .registro-tabla th:first-child,
+  .registro-tabla td:first-child,
+  .registro-tabla th:nth-child(2),
+  .registro-tabla td:nth-child(2) {
+      min-width: auto;
+  }
+
+  .loading,
+  .error,
+  .no-registros {
+      font-size: 1.2rem; /* Ajuste intermedio del tamaño de fuente */
+      margin-top: 2rem; /* Ajuste intermedio del margen */
+      padding: 1.5rem; /* Ajuste intermedio del padding */
+  }
+}
+
+/* --- ESCRITORIO Y PANTALLAS GRANDES (a partir de 1025px) --- */
+@media (min-width: 1025px) {
+  .registro-container {
+      padding: 3rem; /* Volver al padding original */
+      max-width: 1200px; /* Volver al ancho máximo original */
+  }
+
+  h2 {
+      font-size: 2.5rem; /* Volver al tamaño de fuente original */
+      margin-bottom: 2rem; /* Volver al margen original */
+  }
+
+  .registro-tabla {
+      font-size: 1.2rem; /* Volver al tamaño de fuente original */
+  }
+
+  .registro-tabla th,
+  .registro-tabla td {
+      padding: 20px 25px; /* Volver al padding original */
+  }
+
+  .loading,
+  .error,
+  .no-registros {
+      font-size: 1.5rem; /* Volver al tamaño de fuente original */
+      margin-top: 3rem; /* Volver al margen original */
+      padding: 1rem; /* Mantener un padding estándar o ajustar si es necesario */
+  }
+}
