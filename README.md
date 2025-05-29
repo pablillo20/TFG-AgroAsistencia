@@ -33,13 +33,13 @@
 
 ## 🛠️ Tecnologías utilizadas
 
-- **Frontend**: *(Ej: React, Vue, Bootstrap, etc.)*
-- **Backend**: *(Ej: Node.js, Express, Laravel, Django, etc.)*
-- **Base de Datos**: *(Ej: PostgreSQL, MySQL, MongoDB, etc.)*
+- **Frontend**: *(React)*
+- **Backend**: *(Laravel)*
+- **Base de Datos**: *(MySQL)*
 - **APIs externas**: 
-  - API de clima (ej. OpenWeatherMap)
-  - API de mapas (ej. Leaflet, Google Maps)
-  - WhatsApp URL API para chats directos
+  - API de clima (OpenWeatherMap)
+  - API de mapas (Leaflet)
+  - WhatsApp URL para chats directos
 
 ---
 
@@ -53,6 +53,9 @@ npm install # o yarn install
 ## 🖥️ Uso
 ```bash
 npm run dev
+
+php artisan serve
 ```
+
 
 
