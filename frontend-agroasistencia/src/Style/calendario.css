@@ -149,43 +149,161 @@
   font-size: 13px; /* Reducido */
 }
 
-/* ========================================================= */
-/* MEDIA QUERIES */
-/* ========================================================= */
 
-/* --- TABLETS (768px a 1024px) --- */
-@media (min-width: 768px) {
+/* --- MÓVILES MUY PEQUEÑOS (menos de 320px) --- */
+@media (max-width: 319px) {
   .contenedor-calendario {
-      padding: 20px; /* Restaurar padding original */
+      padding: 5px; /* Padding aún más reducido para pantallas muy pequeñas */
   }
 
   .calendario {
-      padding: 20px; /* Restaurar padding original */
-      margin-top: 20px; /* Restaurar margen */
-      max-width: 100rem; /* Volver al max-width original */
+      padding: 5px; /* Padding interno del calendario más pequeño */
+      margin-top: 5px; /* Margen superior reducido */
+  }
+
+  .calendario h2.titulo {
+      margin-bottom: 10px; /* Margen inferior un poco más pequeño */
+      padding-bottom: 3px; /* Padding inferior de título reducido */
+      font-size: 1rem; /* Título principal más pequeño */
+  }
+
+  .calendario h3 {
+      margin-bottom: 10px; /* Margen inferior un poco más pequeño */
+      font-size: 0.9rem; /* Subtítulo más pequeño */
+  }
+
+  .calendario table {
+      min-width: 280px; /* Permite que la tabla se ajuste un poco más */
+  }
+
+  .calendario thead th {
+      padding: 5px; /* Padding de encabezados de tabla muy reducido */
+      font-size: 0.7em; /* Fuente aún más pequeña para encabezados */
+  }
+
+  .calendario tbody td {
+      padding: 5px; /* Padding de celdas muy reducido */
+      height: 40px; /* Altura de celda más pequeña */
+      font-size: 0.8em; /* Fuente de contenido de celda más pequeña */
+  }
+
+  .titulo-trabajo {
+      bottom: 1px;
+      left: 1px;
+      right: 1px;
+      font-size: 0.6em; /* Título de trabajo aún más pequeño */
+  }
+
+  .mensaje-error {
+      margin-top: 10px;
+      font-size: 0.8rem;
+  }
+
+  .navegacion-mes {
+      margin-bottom: 8px; /* Margen inferior de navegación reducido */
+  }
+
+  .boton-navegacion {
+      font-size: 0.9em; /* Botones de navegación más pequeños */
+      padding: 3px 6px; /* Padding de botones más reducido */
+  }
+
+  .selector-mes,
+  .selector-año {
+      margin: 0 1px; /* Margen entre selectores más reducido */
+      padding: 2px; /* Padding de selectores más reducido */
+      font-size: 12px; /* Fuente de selectores más pequeña */
+  }
+}
+
+/* --- TABLETS (768px a 1024px) --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contenedor-calendario {
+      padding: 15px; /* Ajuste para tablets */
+  }
+
+  .calendario {
+      padding: 15px; /* Ajuste para tablets */
+      margin-top: 15px; /* Ajuste para tablets */
+      max-width: 700px; /* Un ancho más razonable para tablets */
+  }
+
+  .calendario h2.titulo {
+      margin-bottom: 18px;
+      padding-bottom: 6px;
+      font-size: 1.4rem; /* Ajustado para tablets */
+  }
+
+  .calendario h3 {
+      margin-bottom: 18px;
+      font-size: 1.1rem; /* Ajustado para tablets */
+  }
+
+  .calendario thead th {
+      padding: 9px;
+      font-size: 0.85em;
+  }
+
+  .calendario tbody td {
+      padding: 9px;
+      height: 55px; /* Altura de celda ajustada para tablets */
+      font-size: 0.95em;
+  }
+
+  .titulo-trabajo {
+      bottom: 2px;
+      left: 3px;
+      right: 3px;
+      font-size: 0.75em;
+  }
+
+  .boton-navegacion {
+      font-size: 1.1em;
+      padding: 4px 9px;
+  }
+
+  .selector-mes,
+  .selector-año {
+      margin: 0 3px;
+      padding: 4px;
+      font-size: 14px;
+  }
+}
+
+
+/* --- ESCRITORIO Y PANTALLAS GRANDES (a partir de 1025px) --- */
+@media (min-width: 1025px) {
+  .contenedor-calendario {
+      padding: 20px;
+  }
+
+  .calendario {
+      padding: 20px;
+      margin-top: 20px;
+      max-width: 900px; /* Ancho típico para escritorio */
   }
 
   .calendario h2.titulo {
       margin-bottom: 20px;
       border-bottom: 2px solid #004d40;
       padding-bottom: 8px;
-      font-size: 1.5rem; /* Ajustado para tablets */
+      font-size: 2rem;
   }
 
   .calendario h3 {
       margin-bottom: 20px;
-      font-size: 1.2rem; /* Ajustado para tablets */
+      font-size: 1.5rem;
   }
 
   .calendario thead th {
-      padding: 10px; /* Ligeramente más grande que móvil */
-      font-size: 0.9em;
+      padding: 12px;
+      font-size: 1em;
   }
 
   .calendario tbody td {
-      padding: 10px; /* Ligeramente más grande que móvil */
-      height: 60px; /* Restaurar altura de celda */
-      font-size: 1em; /* Restaurar tamaño de fuente */
+      padding: 12px;
+      height: 60px;
+      font-size: 1em;
   }
 
   .calendario tbody td:hover {
@@ -196,41 +314,41 @@
       bottom: 2px;
       left: 5px;
       right: 5px;
-      font-size: 0.8em; /* Restaurar tamaño de fuente */
+      font-size: 0.8em;
   }
 
   .boton-navegacion {
-      font-size: 1.2em; /* Restaurar */
-      padding: 5px 10px; /* Restaurar */
+      font-size: 1.2em;
+      padding: 5px 10px;
   }
 
   .selector-mes,
   .selector-año {
-      margin: 0 5px; /* Restaurar */
-      padding: 5px; /* Restaurar */
-      font-size: 14px; /* Restaurar */
+      margin: 0 5px;
+      padding: 5px;
+      font-size: 15px;
   }
 }
 
-/* --- ESCRITORIO Y PANTALLAS GRANDES (a partir de 1025px) --- */
-@media (min-width: 1025px) {
+/* --- ESCRITORIO MUY GRANDE (opcional, para pantallas > 1400px) --- */
+@media (min-width: 1400px) {
+  .calendario {
+      max-width: 1200px; /* Permite que el calendario sea aún más ancho */
+  }
   .calendario h2.titulo {
-      font-size: 2rem; /* Restaurar tamaño original */
+      font-size: 2.2rem;
   }
-
   .calendario h3 {
-      font-size: 1.5rem; /* Restaurar tamaño original */
+      font-size: 1.7rem;
   }
-
   .calendario thead th {
-      padding: 12px; /* Restaurar padding original */
+      padding: 14px;
   }
-
   .calendario tbody td {
-      padding: 12px; /* Restaurar padding original */
-      height: 60px; /* Asegurar altura */
+      padding: 14px;
+      height: 70px; /* Puede aumentar la altura de las celdas */
   }
-
-  /* Puedes añadir más ajustes aquí si el diseño requiere más espacio
-     o elementos más grandes en pantallas muy anchas. */
+  .titulo-trabajo {
+      font-size: 0.9em;
+  }
 }

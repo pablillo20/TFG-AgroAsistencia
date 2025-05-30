@@ -107,12 +107,58 @@
 }
 
 
-/* ========================================================= */
-/* MEDIA QUERIES */
-/* ========================================================= */
+/* --- EXTRA SMALL MOBILES (less than 320px) --- */
+@media (max-width: 319px) {
+  .fondo-login {
+      padding: 10px; /* Reduced padding for very small screens */
+      min-height: 90vh; /* Adjust height to give more space for the form */
+  }
+
+  .formulario-login {
+      padding: 20px; /* Further reduced padding inside the form */
+      border-radius: 6px; /* Slightly smaller border-radius */
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08); /* Even softer shadow */
+      max-width: 300px; /* Limit width to prevent horizontal scroll */
+  }
+
+  .formulario-login h2 {
+      font-size: 20px; /* Smaller heading */
+      margin-bottom: 20px; /* Reduced margin */
+  }
+
+  .formulario-login div {
+      margin-bottom: 15px; /* Reduced space between form groups */
+  }
+
+  .formulario-login label {
+      font-size: 12px; /* Smaller label font size */
+      margin-bottom: 4px; /* Reduced label margin */
+  }
+
+  .formulario-login input {
+      padding: 8px; /* Reduced input padding */
+      font-size: 13px; /* Smaller input font size */
+  }
+
+  .formulario-login .error {
+      font-size: 12px; /* Smaller error message font size */
+      margin-top: 2px; /* Reduced error message margin */
+  }
+
+  .formulario-login button {
+      padding: 8px 15px; /* Reduced button padding */
+      font-size: 14px; /* Smaller button font size */
+      margin-top: 6px; /* Reduced button top margin */
+  }
+
+  .formulario-login .register-link {
+      margin-top: 15px; /* Reduced register link margin */
+      font-size: 12px; /* Smaller register link font size */
+  }
+}
 
 /* --- TABLETS (601px a 1024px) --- */
-@media (min-width: 601px) {
+@media (min-width: 601px) and (max-width: 1024px) {
   .formulario-login {
       padding: 35px; /* Ajuste intermedio del padding */
       border-radius: 10px; /* Ajuste intermedio del border-radius */
@@ -166,6 +212,7 @@
   }
 
   .formulario-login button:active {
+      background-color: #388E3C;
       transform: translateY(0); /* Restaurar transform en active */
   }
 

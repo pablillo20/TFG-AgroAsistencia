@@ -155,12 +155,14 @@ const Trabajo = () => {
                 <p>
                   <strong>Nombre:</strong> {trabajo.nombre}
                 </p>
+                {/** 
                 <button
                   className="btn small danger"
                   onClick={() => handleDelete(trabajo.id_trabajo)}
                 >
                   Eliminar
                 </button>
+                */}
               </div>
             ))
           ) : (

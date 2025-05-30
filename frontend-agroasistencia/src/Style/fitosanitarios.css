@@ -210,15 +210,15 @@
   }
 
   .fitosanitarios-table {
-      display: table; /* Volver a display de tabla normal */
-      overflow-x: visible; /* Desactivar scroll horizontal si no es necesario */
-      white-space: normal; /* Permitir que el texto se ajuste normalmente */
+      display: table; 
+      overflow-x: visible; 
+      white-space: normal; 
   }
 
   .fitosanitarios-table th,
   .fitosanitarios-table td {
-      padding: 10px; /* Restaurar padding original */
-      font-size: 0.95rem; /* Ajuste intermedio */
+      padding: 10px; 
+      font-size: 0.95rem; 
   }
 
   .no-data-message {
@@ -307,7 +307,4 @@
   .sugerencia-form-container h2 {
       font-size: 2rem; /* Volver al tamaño original */
   }
-
-  /* Puedes añadir más ajustes aquí si el diseño requiere más espacio
-     o elementos más grandes en pantallas muy anchas. */
 }

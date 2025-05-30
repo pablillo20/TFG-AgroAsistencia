@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Evita el scroll horizontal no deseado */
 }
 
 header {
@@ -185,12 +185,86 @@ main {
     color: #27ae60;
 }
 
-/* ========================================================= */
-/* MEDIA QUERIES */
-/* ========================================================= */
+/*
+## Media Queries
+*/
+/* --- MÓVILES MUY PEQUEÑOS (menos de 320px) --- */
+@media (max-width: 319px) {
+    header {
+        padding: 0.8rem; /* Padding ligeramente reducido */
+    }
 
-/* --- TABLETS Y ESCRITORIO (a partir de 768px) --- */
-@media (min-width: 1600px) {
+    .logo-text {
+        font-size: 1.5rem; /* Tamaño de fuente del logo más pequeño */
+    }
+
+    .logo-img {
+        width: 28px; /* Imagen del logo ligeramente más pequeña */
+        height: 28px;
+    }
+
+    .menu-toggle {
+        font-size: 1.8rem; /* Tamaño del icono de hamburguesa un poco más pequeño */
+        right: 0.5rem; /* Ajuste de posición */
+    }
+
+    .navigation-links {
+        max-width: 250px; /* Ancho máximo del menú desplegable un poco más estrecho */
+    }
+
+    .nav-link,
+    .logout-button {
+        padding: 0.8rem 0.5rem; /* Padding reducido */
+        font-size: 0.9rem; /* Fuente más pequeña para los enlaces del menú */
+    }
+
+    main {
+        padding: 0.5rem; /* Padding del contenido principal reducido */
+    }
+
+    .loading {
+        width: 80px; /* Imagen de carga más pequeña */
+        height: 80px;
+        margin: 3rem auto; /* Márgenes ajustados */
+    }
+
+    .site-footer {
+        padding: 0.8rem; /* Padding del footer reducido */
+        font-size: 0.7rem; /* Fuente del footer más pequeña */
+    }
+
+    .site-footer nav ul li {
+        margin: 0.1rem 0; /* Márgenes entre enlaces del footer reducidos */
+    }
+
+    .site-footer nav ul li a {
+        padding: 0.1rem 0; /* Padding de enlaces del footer reducido */
+    }
+}
+
+/* --- TABLETS (768px a 1024px) --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Por defecto, si no hay cambios aquí, se usarán los estilos base para móviles.
+       Puedes añadir estilos específicos para tablets si tu diseño lo requiere. */
+    header {
+        padding: 1rem 1.5rem; /* Un poco más de padding que en móvil */
+    }
+
+    .menu-toggle {
+        display: block; /* Mantiene el botón de hamburguesa visible */
+    }
+
+    .navigation-links {
+        max-width: 350px; /* Un poco más de ancho para el menú desplegable en tablets */
+    }
+    
+    main {
+        padding: 1.5rem; /* Aumenta el padding principal */
+    }
+}
+
+/* --- ESCRITORIO (a partir de 1025px) --- */
+@media (min-width: 1025px) {
     header {
         padding: 1rem 2rem;
         flex-direction: row;
@@ -199,7 +273,7 @@ main {
     }
 
     .menu-toggle {
-        display: none; /* Oculta el botón de hamburguesa en pantallas grandes */
+        display: none; /* Oculta el botón de hamburguesa en pantallas de escritorio */
     }
 
     /* Resetea los estilos para la navegación de escritorio */
@@ -240,13 +314,13 @@ main {
     }
 
     main {
-        padding: 0rem;
+        padding: 2rem; /* Padding estándar para contenido principal en escritorio */
     }
 
-    /* Ajuste de margen para la imagen de carga en pantallas más grandes */
+    /* Ajuste de margen para la imagen de carga en pantallas de escritorio */
     .loading {
-        margin-top: 15rem;
-        margin-bottom: 16rem;
+        margin-top: 10rem;
+        margin-bottom: 11rem;
     }
 
     .site-footer {
@@ -265,15 +339,14 @@ main {
     }
 }
 
-/* --- ESCRITORIO Y PANTALLAS GRANDES --- */
-@media (min-width: 1025px) {
+/* --- ESCRITORIO MUY GRANDE (a partir de 1400px - Opcional) --- */
+@media (min-width: 1400px) {
     .navigation-links {
-        gap: 2rem; /* Puedes aumentar el espacio entre los ítems en escritorio */
+        gap: 2rem; /* Aumenta el espacio entre ítems para pantallas más anchas */
     }
 
-    /* Ajuste de margen para la imagen de carga en pantallas aún más grandes */
     .loading {
-        margin-top: 18rem;
-        margin-bottom: 19rem;
+        margin-top: 15rem; /* Ajusta el margen si la imagen de carga se ve mejor más baja */
+        margin-bottom: 16rem;
     }
 }

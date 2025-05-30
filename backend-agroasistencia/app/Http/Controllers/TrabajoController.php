@@ -71,9 +71,6 @@ class TrabajoController extends Controller
     {
 
         $trabajo = Trabajos::find($id_trabajo);
-        if (!$trabajo) {
-            return response()->json(['message' => 'Trabajo no encontrado'], 404);
-        }
 
 
         $trabajo->delete();

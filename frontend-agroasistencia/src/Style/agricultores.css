@@ -138,6 +138,82 @@ button[type="submit"]:hover {
 /* MEDIA QUERIES */
 /* ========================================================= */
 
+/* --- MÓVILES MUY PEQUEÑOS (menos de 320px) --- */
+@media (max-width: 319px) {
+  .contenedor-agricultores {
+      max-width: 98%; /* Ocupar casi todo el ancho */
+      margin: 0.5rem auto; /* Márgenes aún más pequeños */
+      padding: 0.5rem; /* Padding mínimo */
+      border-radius: 6px; /* Borde más suave */
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.08); /* Sombra aún más suave */
+  }
+
+  h2, h3 {
+      margin-bottom: 0.5rem; /* Márgenes muy reducidos */
+      font-size: 1.1rem; /* Fuentes aún más pequeñas */
+  }
+
+  .buscador {
+      margin-bottom: 0.8rem; /* Margen reducido */
+      gap: 0.5rem; /* Gap aún más pequeño */
+  }
+
+  .buscador input {
+      padding: 0.5rem; /* Padding muy ajustado */
+      font-size: 0.8rem; /* Texto más pequeño en el input */
+  }
+
+  table th, table td {
+      padding: 0.4rem; /* Padding muy reducido */
+      font-size: 0.75rem; /* Fuente más pequeña para la tabla */
+  }
+
+  /* Ajustar los min-width de las columnas para evitar desbordamientos */
+  table th:first-child,
+  table td:first-child {
+      min-width: 60px; /* Ancho mínimo para la primera columna */
+  }
+  table th:nth-child(2),
+  table td:nth-child(2) {
+      min-width: 100px; /* Ancho mínimo para la segunda columna */
+  }
+
+  form > div {
+      margin-bottom: 0.6rem; /* Margen muy reducido */
+  }
+
+  form label {
+      margin-bottom: 0.1rem; /* Margen muy reducido */
+      font-size: 0.8rem; /* Fuente de label más pequeña */
+  }
+
+  form input {
+      padding: 0.5rem; /* Padding muy ajustado */
+      font-size: 0.85rem; /* Texto de input más pequeño */
+  }
+
+  button[type="submit"] {
+      padding: 0.5rem 0.8rem; /* Padding muy ajustado */
+      font-size: 0.85rem; /* Fuente del botón más pequeña */
+  }
+
+  .error {
+      margin-top: 0.1rem;
+      font-size: 0.75rem; /* Fuente aún más pequeña */
+  }
+
+  .exito {
+      padding: 0.3rem 0.6rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.8rem; /* Fuente aún más pequeña */
+  }
+
+  .tabla-agricultores {
+      max-height: 200px; /* Altura máxima aún más reducida */
+      margin-bottom: 1rem;
+  }
+}
+
 /* --- TABLETS (768px a 1024px) --- */
 @media (min-width: 768px) {
   .contenedor-agricultores {
@@ -236,7 +312,7 @@ button[type="submit"]:hover {
   }
 
   /* Si los estilos de tablet son adecuados para escritorio, no necesitas más aquí.
-     Solo añade reglas si necesitas diferencias significativas en pantallas muy grandes. */
+      Solo añade reglas si necesitas diferencias significativas en pantallas muy grandes. */
   table th, table td {
       font-size: 1rem; /* Tamaño de fuente estándar para escritorio */
   }
