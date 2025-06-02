@@ -47,7 +47,6 @@
 
 ```bash
 git clone https://github.com/pablillo20/TFG-AgroAsistenciar.git
-cd agromanager
 npm install
 ````
 ## 🖥️ Uso
