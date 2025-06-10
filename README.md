@@ -1,6 +1,6 @@
 # 🌾 AgroAsistencia - Sistema de Gestión Agrícola
 
-**AgroManager** es una aplicación completa para la gestión de usuarios, agricultores, fincas, maquinaria y trabajos agrícolas. Ofrece una interfaz intuitiva para registrar, consultar y controlar todas las operaciones del campo, incluyendo herramientas interactivas como geolocalización, chat directo con agricultores y un sistema de seguimiento meteorológico por zonas.
+**AgroAsistencia** es una aplicación completa para la gestión de usuarios, agricultores, fincas, maquinaria y trabajos agrícolas. Ofrece una interfaz intuitiva para registrar, consultar y controlar todas las operaciones del campo, incluyendo herramientas interactivas como geolocalización, chat directo con agricultores y un sistema de seguimiento meteorológico por zonas.
 
 ---
 
